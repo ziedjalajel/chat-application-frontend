@@ -12,7 +12,7 @@ const DownBar = () => {
   return (
     <div className="Fixed">
       <div className="footer">
-        <IoMdSend
+        {/* <IoMdSend
           className="Send"
           style={{
             placement: "inline",
@@ -23,7 +23,7 @@ const DownBar = () => {
             right: "0.9%",
             // top: "48%",
           }}
-        />
+        /> */}
 
         <div>
           {/* <label className="custom-file-upload">

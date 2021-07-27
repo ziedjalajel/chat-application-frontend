@@ -7,7 +7,7 @@ const DetailsMessage = ({ message }) => {
             backgroundColor: "#F48444",
             width: "500px",
             height: "100px",
-            borderRadius: "50%",
+            borderRadius: "5%",
             position: "unset",
             // left: "70%",
             padding: "5%",
@@ -30,10 +30,13 @@ const DetailsMessage = ({ message }) => {
             marginLeft: "55%",
             padding: "1%",
           }}
+          
         />
       ) : (
         <img style={{ display: "none" }} />
       )}
+                {/* {message.image} */}
+
     </div>
   );
 };
