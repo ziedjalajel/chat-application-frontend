@@ -1,9 +1,17 @@
-// export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
-// export const DELETE_PRODUCT = "DELETE_PRODUCT";
-// export const ADD_PRODUCT = "ADD_PRODUCT";
-// export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
+//chat
+export const FETCH_CHATS = "FETCH_CHATS";
+export const ADD_CHAT = "ADD_CHAT";
+export const DELETE_CHAT = "DELETE_CHAT";
 
-// export const FETCH_SHOPS = "FETCH_SHOPS";
-// export const ADD_SHOP = "CREATE_SHOP";
+//messages
+export const FETCH_MESSAGES = "FETCH_MESSAGES";
+export const ADD_MESSAGE = "ADD_MESSAGE";
+export const DELETE_MESSAGE = "DELETE_MESSAGE";
 
-// export const SET_USER = "SET_USER";
+//profile
+export const FETCH_PROFILES = "FETCH_PROFILES";
+export const ADD_PROFILE = "ADD_PROFILE";
+export const UPDATE_PROFILE = "UPDATE_PROFILE";
+
+//user
+export const SET_USER = "SET_USER";
