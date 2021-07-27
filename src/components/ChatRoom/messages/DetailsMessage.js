@@ -35,7 +35,6 @@ const DetailsMessage = ({ message }) => {
       ) : (
         <img style={{ display: "none" }} />
       )}
-                {/* {message.image} */}
 
     </div>
   );
