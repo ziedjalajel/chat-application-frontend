@@ -1,128 +1,159 @@
-import Profile from "../../Picture1.png"
-import { BsTrash, BsHeart} from 'react-icons/bs';
-import { IoMdAttach, } from 'react-icons/io';
+import Profile from "../../Picture1.png";
+import { BsTrash, BsHeart } from "react-icons/bs";
+import { IoMdAttach, IoMdSend } from "react-icons/io";
 import InputEmoji from "react-input-emoji";
-import React,{ useState } from "react";
-import {Dropdown, Icon}from "rsuite"
- function Room() {
-    const [selectedFile, setSelectedFile] = useState();
-	const [isFilePicked, setIsFilePicked] = useState(false);
+import React, { useState } from "react";
+import { Dropdown, Icon } from "rsuite";
+import "./Room.css";
 
-	const changeHandler = (event) => {
-		setSelectedFile(event.target.files[0]);
-		setIsFilePicked(true);
-	};
+function Room() {
+  const [text, setText] = useState("");
 
-	const handleSubmission = () => {
-		const formData = new FormData();
+  function handleOnEnter(text) {
+    console.log("enter", text);
+  }
+  return (
+    <div style={{ width: "70%", position: "absolute", left: "30%" }}>
+      <div
+        style={{
+          border: "15px solid red",
+          backgroundColor: "red",
+          width: "100%",
+        }}
+      >
+        <h1>Chat name </h1>
+        <img
+          src={Profile}
+          style={{
+            position: "absolute",
+            width: "90px",
+            height: "90px",
+            left: "85%",
+            top: "1px",
+          }}
+        />
 
-		formData.append('File', selectedFile);
+        <BsTrash
+          style={{
+            position: "absolute",
+            width: "30px",
+            height: "30px",
+            left: "93%",
+            right: "0.9%",
+            top: " 10px",
+            bottom: " 90.23%",
+          }}
+        />
 
-		fetch(
-			'https://freeimage.host/api/1/upload?key=<6d207e02198a847aa98d0a2a901485a5>',
-			{
-				method: 'POST',
-				body: formData,
-			}
-		)
-			.then((response) => response.json())
-			.then((result) => {
-				console.log('Success:', result);
-			})
-			.catch((error) => {
-				console.error('Error:', error);
-			});
-	};
-	
-    const [text, setText] = useState("");
+        <BsHeart
+          style={{
+            position: "absolute",
+            width: "30px",
+            height: "30px",
+            left: "93%",
+            right: "0.9%",
+            top: " 50px",
+          }}
+        />
+      </div>
+      <div
+        className="CircledText"
+        style={{
+          backgroundColor: "#F48444",
+          width: "500px",
+          height: "100px",
+          borderRadius: "50%",
+          position: "unset",
+          left: "70%",
+          padding: "5%",
+          paddingLeft: "10%",
+          paddingBottom: "6%",
+          marginLeft: "50%",
+          marginTop: "2%",
+        }}
+      >
+        <h3>text</h3>
+      </div>
 
-    function handleOnEnter(text) {
-      console.log("enter", text);
-    }
-    return (
- <div style={{width:"70%",position:"absolute",left: "30%" }}>
+      <div
+        style={{
+          position: "absolute",
+          width: "90%",
+          height: "54px",
+          left: "30%px",
+          top: "298%",
+          boxSizing: " border-box",
+        }}
+      >
+        {/* <button >  */}
 
- <div style={{border:"15px solid red", backgroundColor:"red" ,width:"100%"}}>
-    <h1>Chat name </h1>
-    <img src={Profile} style={{position: "absolute",
-width: "90px",
-height:"90px",
-left: "85%",
-top: "1px"}}/>
+        {/* <div class="input-group">
+          <select
+            class="form-select"
+            id="movie"
+            aria-label="Example select with button addon"
+            class="col-4"
+            name="userId"
+            defaultValue={toDo.priority}
+            onChange={handleChange}
+          >
+            <option value="">Type</option> not done
+            <option value="1">Owner</option>
+            <option value="2">Coach</option>
+            <option value="3">Member</option>
+          </select>
+        </div> */}
+        <div>
+          <IoMdSend
+            style={{
+              placement: "inline",
+              position: "absolute",
+              width: "32px",
+              height: "32px",
+              left: "100%",
+              right: "0.9%",
+              top: "65%",
+            }}
+          />
 
+          <div>
+            <label className="custom-file-upload">
+              <input type="file" multiple />
+              <IoMdAttach
+                style={{
+                  position: "absolute",
+                  width: "40px",
+                  height: "40px",
+                  left: "103%",
+                  right: "0.9%",
+                  top: "60%",
+                }}
+              />
+            </label>
+            {/* onChange={this.onChange} */}
 
-<BsTrash style={{
-    position: "absolute",
-    width: "30px",
-    height:"30px",
-    left: "93%",
-    right: "0.9%",
-    top:" 10px",
-    bottom:" 90.23%",
-    }} />
+            {/* {this.state.files.map((x) => (
+            <div
+              className="file-preview"
+              onClick={this.removeFile.bind(this, x)}
+            >
+              {x.name}
+            </div>
+          )
+          )} */}
+          </div>
 
-    
-<BsHeart style={{
-    position: "absolute",
-    width: "30px",
-    height:"30px",
-    left: "93%",
-    right: "0.9%",
-    top:" 50px",
-    }} />
-</div>
-<div style={{backgroundColor:"#F48444", width:"500px", height: "100px", borderRadius:"50%",position:"unset",left:"70%", padding:"5%" ,paddingLeft:"10%",paddingBottom:"6%",marginLeft:"55%",marginTop:"2%"}}>
-<h3 >text</h3>
-</div>
+          <InputEmoji
+            value={text}
+            onChange={setText}
+            cleanOnEnter
+            onEnter={handleOnEnter}
+            placeholder="Type a message"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
 
-<div style={{
-position: "absolute",
-width: "90%",
-height: "54px",
-left: "30%px",
-top: "298%",
-boxSizing:" border-box"}}>
-{/* <button >  */}
-    <IoMdAttach style={{
-    position: "absolute",
-    width: "40px",
-    height:"40px",
-    left: "100%",
-    right: "0.9%",
-    top:" 90.23 %",
-    bottom:"10px",
-    
-}}/>
-{/* <input type="file" name="file" onChange={changeHandler} />
-			{isFilePicked ? (
-				<div>
-					<p>Filename: {selectedFile.name}</p>
-					<p>Filetype: {selectedFile.type}</p>
-					<p>Size in bytes: {selectedFile.size}</p>
-					<p>
-						lastModifiedDate:{' '}
-						{selectedFile.lastModifiedDate.toLocaleDateString()}
-					</p>
-				</div>
-			) : (
-				<p>Select a file to show details</p>
-			)}
-			<div>
-				<button onClick={handleSubmission}>Submit</button>
-			</div> */}
-{/* </button> */}
-    <InputEmoji
-      value={text}
-      onChange={setText}
-      cleanOnEnter
-      onEnter={handleOnEnter}
-      placeholder="Type a message"
-    />
-</div>
-
-</div>
-
-   );
- };
-  
- export default Room;
+export default Room;
