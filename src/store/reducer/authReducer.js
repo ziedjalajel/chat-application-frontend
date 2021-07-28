@@ -2,7 +2,7 @@ import * as actionTypes from "../actions/types";
 
 const initialState = {
   user: null,
-  // loading: true,
+  loading: true,
 };
 
 const reducer = (state = initialState, action) => {
@@ -11,7 +11,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         user: action.payload,
-        // loading: false,
+        loading: false,
       };
     default:
       return state;

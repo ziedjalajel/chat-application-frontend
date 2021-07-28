@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router";
 import Room from "./ChatRoom/Room";
 import SignInForm from "./signIn/SignInForm";
 import SignUpForm from "./signUp/SignUpForm";
+import Home from "./Home";
 
 const Routes = () => {
   return (
@@ -13,8 +14,11 @@ const Routes = () => {
       <Route path="/signin">
         <SignInForm />
       </Route>
-      <Route path="/">
+      <Route path="/chatroom">
         <Room />
+      </Route>
+      <Route exact path="/">
+        <Home />
       </Route>
     </Switch>
   );
