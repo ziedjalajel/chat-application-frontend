@@ -32,3 +32,13 @@ export const Button = styled.button`
 //   align-items: center; */
 //   /* position: absolute; */
 // `;
+export const RoomMasterDiv = styled.div`
+  width: 70%;
+  position: absolute;
+  left: 30%;
+`;
+export const RoomSecondDiv = styled.div`
+  border: 15px solid red;
+  background-color: red;
+  width: 100%;
+`;

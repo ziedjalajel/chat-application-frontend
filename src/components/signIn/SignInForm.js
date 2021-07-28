@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 
 import { useHistory } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+
 import { signIn } from "../../store/actions/authActions";
 
 import { Center, Button } from "../../styles";
@@ -62,6 +64,11 @@ const SignInForm = () => {
       <Button type="submit" className="btn btn-danger">
         Log in
       </Button>
+      <Link to="/signup">
+        <h6 style={{ textAlign: "center" }}>
+          Don't have account? Register Now
+        </h6>
+      </Link>
     </form>
   );
 };

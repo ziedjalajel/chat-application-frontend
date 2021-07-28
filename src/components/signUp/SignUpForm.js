@@ -4,26 +4,25 @@ import { useDispatch } from "react-redux";
 
 import { useHistory } from "react-router-dom";
 
-import { addSignUp } from "../../store/actions/signUpActions";
+import { signUp } from "../../store/actions/authActions";
 
 import { Center, Button } from "../../styles";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [signUp, setSignUp] = useState({
+  const [user, setUser] = useState({
     username: "",
     password: "",
     email: "",
   });
 
   const handleChange = (event) =>
-    setSignUp({ ...signUp, [event.target.name]: event.target.value });
+    setUser({ ...user, [event.target.name]: event.target.value });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addSignUp(signUp));
-    history.push("/");
+    dispatch(signUp(user, history));
   };
   return (
     <form className="container" onSubmit={handleSubmit}>
@@ -38,7 +37,7 @@ const SignUpForm = () => {
           <input
             style={{ marginLeft: "60%" }}
             type="text"
-            value={signUp.email}
+            value={user.email}
             onChange={handleChange}
             name="email"
             className="form-control"
@@ -54,7 +53,7 @@ const SignUpForm = () => {
           <input
             style={{ marginLeft: "60%" }}
             type="text"
-            value={signUp.username}
+            value={user.username}
             onChange={handleChange}
             name="username"
             className="form-control"
@@ -73,7 +72,7 @@ const SignUpForm = () => {
           <input
             style={{ marginLeft: "60%" }}
             type="password"
-            value={signUp.password}
+            value={user.password}
             onChange={handleChange}
             name="password"
             className="form-control"
