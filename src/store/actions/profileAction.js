@@ -1,4 +1,3 @@
-import axios from "axios";
 import instance from "./instance";
 
 import * as actionTypes from "./types";
@@ -7,7 +6,7 @@ export const fetchProfiles = () => {
   return async (dispatch) => {
     try {
       const res = await instance.get("/profile");
-      // console.log(res.data);
+      console.log(res.data);
       dispatch({
         type: actionTypes.FETCH_PROFILES,
         payload: res.data,

@@ -1,4 +1,3 @@
-import axios from "axios";
 import instance from "./instance";
 
 import * as actionTypes from "./types";
@@ -7,7 +6,7 @@ export const fetchMessages = () => {
   return async (dispatch) => {
     try {
       const res = await instance.get("/messages");
-      // console.log(res.data);
+      console.log(res.data);
       dispatch({
         type: actionTypes.FETCH_MESSAGES,
         payload: res.data,

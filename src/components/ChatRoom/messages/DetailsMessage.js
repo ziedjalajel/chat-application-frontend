@@ -9,7 +9,6 @@ const DetailsMessage = ({ message }) => {
             height: "100px",
             borderRadius: "5%",
             position: "unset",
-            // left: "70%",
             padding: "5%",
             paddingLeft: "10%",
             paddingBottom: "6%",
@@ -30,12 +29,10 @@ const DetailsMessage = ({ message }) => {
             marginLeft: "55%",
             padding: "1%",
           }}
-          
         />
       ) : (
         <img style={{ display: "none" }} />
       )}
-
     </div>
   );
 };

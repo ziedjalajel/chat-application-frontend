@@ -56,16 +56,10 @@ select {
   width: 65%;
   flex: 1 0 0;
 }
-/* .Fixed {
-  position: fixed;
-  width: 100%;
-} */
+
 .Emoji {
   z-index: -1;
 }
 .Send {
   z-index: 1;
 }
-/* .BigDiv {
-  display: none;
-} */
