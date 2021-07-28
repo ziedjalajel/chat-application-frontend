@@ -53,32 +53,36 @@ const FormMessage = () => {
             position: "absolute",
             width: "28px",
             height: "28px",
-            left: "129%",
+            left: "93%",
             right: "0.9%",
-            top: "17%",
+            top: "98.5%",
+            cursor: "pointer"
           }}
         />
       </div>
       <div>
         <form className="container" onSubmit={handleSubmit}>
           <label>
+            <div type="input ">
             <input
               name="image"
               type="file"
               onChange={handleAttachment}
               className="form-control"
+              
             />
-
             <IoMdAttach
               style={{
                 position: "absolute",
                 width: "40px",
                 height: "40px",
-                left: "125%",
+                left: "90%",
                 right: "0.9%",
-                top: "10%",
+                top: "98.3%",
+                cursor: "pointer",
+                zIndex: 1
               }}
-            />
+            /></div>
           </label>
           <button type="submit " onSubmit={handleSubmit}></button>
         </form>
