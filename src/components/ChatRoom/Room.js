@@ -5,7 +5,7 @@ import InputEmoji from "react-input-emoji";
 import React, { useState } from "react";
 import { Dropdown, Icon } from "rsuite";
 import "./Room.css";
-import DownBar from "./DownBar";
+import FormMessage from "./messages/FormMessage";
 import MessageList from "./messages/MessageList";
 import { useSelector } from "react-redux";
 
@@ -89,7 +89,7 @@ function Room() {
           width: "90%",
           height: "54px",
           left: "30%px",
-          top: "298%",
+          // top: "298%",
           boxSizing: " border-box",
         }}
       >
@@ -112,7 +112,7 @@ function Room() {
           </select>
         </div> */}
       </div>
-      <DownBar />
+      <FormMessage />
     </div>
   );
 }
