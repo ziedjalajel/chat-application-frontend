@@ -22,7 +22,7 @@ export const addProfile = (newProfile) => {
     try {
       const formData = new FormData();
       for (const key in newProfile) formData.append(key, newProfile[key]);
-      const res = await instance.post(`/profiles`, formData);
+      const res = await instance.post("/profiles", formData);
       dispatch({
         type: actionTypes.ADD_PROFILE,
         payload: { newProfile: res.data },

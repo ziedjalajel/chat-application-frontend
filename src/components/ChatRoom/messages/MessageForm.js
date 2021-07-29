@@ -1,21 +1,14 @@
-//redux
-import { useDispatch } from "react-redux";
-//react
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 //Emoji
 import InputEmoji from "react-input-emoji";
 //styling
 import { IoMdAttach, IoMdSend } from "react-icons/io";
-import {
-  InputImojiDiv,
-  SendIcon,
-  SendIconDiv,
-  AttachIconDiv,
-} from "../../../styles";
+import { InputImojiDiv, SendIconDiv, AttachIconDiv } from "../../../styles";
 //action
 import { addMessage } from "../../../store/actions/messageActions";
 
-const FormMessage = () => {
+const MessageForm = () => {
   const dispatch = useDispatch();
   const [message, setMessage] = useState({
     image: "",
@@ -85,4 +78,4 @@ const FormMessage = () => {
     </div>
   );
 };
-export default FormMessage;
+export default MessageForm;

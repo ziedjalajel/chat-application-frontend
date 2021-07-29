@@ -1,8 +1,9 @@
-import DetailsMessage from "./DetailsMessage";
+//component
+import MessageDetails from "./MessageDetails";
 
 const MessageList = ({ messages }) => {
   const messageList = messages.map((message) => (
-    <DetailsMessage message={message} key={message.id} />
+    <MessageDetails message={message} key={message.id} />
   ));
   return <div>{messageList}</div>;
 };
