@@ -1,5 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
-import { IoMdAttach, IoMdSend } from "react-icons/io";
+import styled from "styled-components";
 
 export const Center = styled.div`
   text-align: center;

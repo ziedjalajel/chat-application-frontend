@@ -1,3 +1,4 @@
+//component
 import Routes from "./components/Routes";
 
 function App() {

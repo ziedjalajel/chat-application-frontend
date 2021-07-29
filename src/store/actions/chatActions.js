@@ -22,7 +22,7 @@ export const fetchChats = () => {
       //     try {
       //       const formData = new FormData();
       //       for (const key in newChat) formData.append(key, newChat[key]);
-      //       const res = await instance.post(`/chats`, formData);
+      //       const res = await instance.post("/chats", formData);
       //       dispatch({
       //         type: actionTypes.ADD_CHAT,
       //         payload: { newChat: res.data },

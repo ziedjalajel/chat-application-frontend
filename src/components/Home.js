@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+//styles
 import { HomeButton, HomeDiv, HomeTitleDiv } from "../styles";
 
 const Home = () => {

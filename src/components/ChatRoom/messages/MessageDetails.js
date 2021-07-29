@@ -1,3 +1,4 @@
+//styling
 import {
   MessageBoxP,
   DetailMesaageMasterDiv,
@@ -5,7 +6,7 @@ import {
   ImageDisNone,
 } from "../../../styles";
 
-const DetailsMessage = ({ message }) => {
+const MessageDetails = ({ message }) => {
   return (
     <DetailMesaageMasterDiv>
       {message.text && <MessageBoxP>{message.text}</MessageBoxP>}
@@ -13,4 +14,4 @@ const DetailsMessage = ({ message }) => {
     </DetailMesaageMasterDiv>
   );
 };
-export default DetailsMessage;
+export default MessageDetails;
