@@ -15,8 +15,8 @@ import { signOut } from "../../store/actions/authActions";
 function Room() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const messages = useSelector((state) => state.messages.messages);
-  const token = useSelector((state) => state.user.user);
+  const messages = useSelector((state) => state.messageReducer.messages);
+  const token = useSelector((state) => state.authReducer.user);
   if (!token) return <Redirect to="/" />;
   const handleSignOut = () => dispatch(signOut(history));
   return (

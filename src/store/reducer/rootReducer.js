@@ -5,9 +5,9 @@ import profileReducer from "./profileReducer";
 import authReducer from "./authReducer";
 
 const rootReducer = combineReducers({
-  chats: chatReducer,
-  messages: messageReducer,
-  profiles: profileReducer,
-  user: authReducer,
+  chatReducer,
+  messageReducer,
+  profileReducer,
+  authReducer,
 });
 export default rootReducer;
