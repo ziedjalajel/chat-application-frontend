@@ -1,12 +1,17 @@
 import { useState } from "react";
-
 import { useDispatch } from "react-redux";
-
 import { useHistory } from "react-router-dom";
-
+//store
 import { signUp } from "../../store/actions/authActions";
-
-import { Center, Button } from "../../styles";
+//styles
+import {
+  Center,
+  SignupButton,
+  SignH,
+  SignUp1Div,
+  SignUp2Div,
+  SignUpInput,
+} from "../../styles";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
@@ -27,65 +32,40 @@ const SignUpForm = () => {
   return (
     <form className="container" onSubmit={handleSubmit}>
       <Center>
-        <div className="mb-3 col-sm-5" style={{ marginTop: "100px" }}>
-          <h3
-            className="form-label"
-            style={{ color: "red", fontWeight: "bold " }}
-          >
-            Email :
-          </h3>
-          <input
-            style={{ marginLeft: "60%" }}
+        <SignUp1Div className="mb-3 col-sm-5">
+          <SignH className="form-label">Email :</SignH>
+          <SignUpInput
             type="text"
             value={user.email}
             onChange={handleChange}
             name="email"
             className="form-control"
           />
-        </div>
-        <div className="mb-3 col-sm-5" style={{ marginTop: "8%" }}>
-          <h3
-            className="form-label"
-            style={{ color: "red", fontWeight: "bold " }}
-          >
-            Username :
-          </h3>
-          <input
-            style={{ marginLeft: "60%" }}
+        </SignUp1Div>
+        <SignUp2Div className="mb-3 col-sm-5">
+          <SignH className="form-label">Username :</SignH>
+          <SignUpInput
             type="text"
             value={user.username}
             onChange={handleChange}
             name="username"
             className="form-control"
           />
-        </div>
-        <div className="mb-3 col-sm-5" style={{ marginTop: "8%" }}>
-          <h3
-            className="form-label"
-            style={{
-              color: "red",
-              fontWeight: "bold ",
-            }}
-          >
-            Password :
-          </h3>
-          <input
-            style={{ marginLeft: "60%" }}
+        </SignUp2Div>
+        <SignUp2Div className="mb-3 col-sm-5">
+          <SignH className="form-label">Password :</SignH>
+          <SignUpInput
             type="password"
             value={user.password}
             onChange={handleChange}
             name="password"
             className="form-control"
           />
-        </div>
+        </SignUp2Div>
       </Center>
-      <Button
-        type="submit"
-        className="btn btn-danger"
-        style={{ borderRadius: "60%" }}
-      >
+      <SignupButton type="submit" className="btn btn-danger">
         Create
-      </Button>
+      </SignupButton>
     </form>
   );
 };

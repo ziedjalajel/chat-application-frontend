@@ -1,20 +1,25 @@
 import { Link } from "react-router-dom";
-import { Button } from "../styles";
+import { HomeButton, HomeDiv, HomeTitleDiv } from "../styles";
 
 const Home = () => {
   return (
-    <div>
-      <Link to="/signup">
-        <Button type="button" className="btn btn-danger btn-lg">
-          Create Account
-        </Button>
-      </Link>
-      <Link to="/signin">
-        <Button type="button" className="btn btn-danger btn-lg">
-          Already Have Account
-        </Button>
-      </Link>
-    </div>
+    <>
+      <HomeTitleDiv className="container">
+        <h1>Welcome To PikaChat</h1>
+      </HomeTitleDiv>
+      <HomeDiv>
+        <Link to="/signup">
+          <HomeButton type="button" className="btn btn-danger btn-lg">
+            Create Account
+          </HomeButton>
+        </Link>
+        <Link to="/signin">
+          <HomeButton type="button" className="btn btn-danger btn-lg">
+            Already Have Account
+          </HomeButton>
+        </Link>
+      </HomeDiv>
+    </>
   );
 };
 export default Home;
