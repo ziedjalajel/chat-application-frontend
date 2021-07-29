@@ -41,7 +41,7 @@ const MessageForm = () => {
           value={text}
           onChange={setText}
           cleanOnEnter
-          onEnter={() => handleOnEnter()}
+          onEnter={handleOnEnter}
           placeholder="Type a message"
         />
       </InputImojiDiv>
