@@ -4,9 +4,14 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 //Emoji
 import InputEmoji from "react-input-emoji";
-
+//styling
 import { IoMdAttach, IoMdSend } from "react-icons/io";
-
+import {
+  InputImojiDiv,
+  SendIcon,
+  SendIconDiv,
+  AttachIconDiv,
+} from "../../../styles";
 //action
 import { addMessage } from "../../../store/actions/messageActions";
 
@@ -36,53 +41,43 @@ const FormMessage = () => {
 
   return (
     <div>
-      <InputEmoji
-        name="text"
-        className="Emoji"
-        value={text}
-        onChange={setText}
-        cleanOnEnter
-        onEnter={() => handleOnEnter()}
-        placeholder="Type a message"
-      />
-      <div type="button " onClick={handleOnEnter}>
+      <InputImojiDiv>
+        <InputEmoji
+          name="text"
+          className="Emoji"
+          value={text}
+          onChange={setText}
+          cleanOnEnter
+          onEnter={() => handleOnEnter()}
+          placeholder="Type a message"
+        />
+      </InputImojiDiv>
+      <SendIconDiv type="button " onClick={handleOnEnter}>
         <IoMdSend
           className="Send"
           style={{
-            placement: "inline",
-            position: "absolute",
-            width: "28px",
-            height: "28px",
-            left: "93%",
-            right: "0.9%",
-            top: "98.5%",
-            cursor: "pointer"
+            width: "26px",
+            height: "26px",
           }}
         />
-      </div>
+      </SendIconDiv>
       <div>
         <form className="container" onSubmit={handleSubmit}>
           <label>
-            <div type="input ">
-            <input
-              name="image"
-              type="file"
-              onChange={handleAttachment}
-              className="form-control"
-              
-            />
-            <IoMdAttach
-              style={{
-                position: "absolute",
-                width: "40px",
-                height: "40px",
-                left: "90%",
-                right: "0.9%",
-                top: "98.3%",
-                cursor: "pointer",
-                zIndex: 1
-              }}
-            /></div>
+            <AttachIconDiv type="input ">
+              <input
+                name="image"
+                type="file"
+                onChange={handleAttachment}
+                className="form-control"
+              />
+              <IoMdAttach
+                style={{
+                  width: "30px",
+                  height: "30px",
+                }}
+              />
+            </AttachIconDiv>
           </label>
           <button type="submit " onSubmit={handleSubmit}></button>
         </form>

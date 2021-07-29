@@ -32,7 +32,7 @@ function Room() {
             Log Out
           </button>
         </Link>
-        <imRoomImageg src={Profile} />
+        <RoomImage src={Profile} />
 
         <BsTrash
           style={{
