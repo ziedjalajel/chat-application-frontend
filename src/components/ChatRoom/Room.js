@@ -6,7 +6,7 @@ import { Redirect, Link, useHistory } from "react-router-dom";
 import "./Room.css";
 import Profile from "../../Picture1.png";
 import { BsTrash, BsHeart } from "react-icons/bs";
-import { RoomMasterDiv, RoomSecondDiv } from "../../styles";
+import { RoomMasterDiv, RoomSecondDiv, RoomImage } from "../../styles";
 // components
 import FormMessage from "./messages/FormMessage";
 import MessageList from "./messages/MessageList";
@@ -32,16 +32,7 @@ function Room() {
             Log Out
           </button>
         </Link>
-        <img
-          src={Profile}
-          style={{
-            position: "absolute",
-            width: "90px",
-            height: "90px",
-            left: "85%",
-            top: "1px",
-          }}
-        />
+        <imRoomImageg src={Profile} />
 
         <BsTrash
           style={{
@@ -69,15 +60,6 @@ function Room() {
       <div className="BigDiv">
         <MessageList messages={messages} />
       </div>
-      <div
-        style={{
-          position: "absolute",
-          width: "90%",
-          height: "54px",
-          left: "30%px",
-          boxSizing: " border-box",
-        }}
-      ></div>
       <FormMessage />
     </RoomMasterDiv>
   );

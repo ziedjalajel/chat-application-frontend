@@ -1,14 +1,19 @@
 import { useState } from "react";
-
 import { useDispatch } from "react-redux";
-
 import { useHistory } from "react-router-dom";
-
 import { Link } from "react-router-dom";
-
+//store
 import { signIn } from "../../store/actions/authActions";
-
-import { Center, Button } from "../../styles";
+//styles
+import {
+  Center,
+  SignInButton,
+  SignIn1Div,
+  SignIn2Div,
+  SignH,
+  SignInInput,
+  SignInSpecialH,
+} from "../../styles";
 
 const SignInForm = () => {
   const dispatch = useDispatch();
@@ -28,46 +33,32 @@ const SignInForm = () => {
   return (
     <form className="container" onSubmit={handleSubmit}>
       <Center>
-        <div className="mb-3 col-sm-6" style={{ marginTop: "100px" }}>
-          <h3
-            className="form-label"
-            style={{ color: "red", fontWeight: "bold " }}
-          >
-            Username :
-          </h3>
-          <input
-            style={{ marginLeft: "50%" }}
+        <SignIn1Div className="mb-3 col-sm-6">
+          <SignH className="form-label">Username :</SignH>
+          <SignInInput
             type="text"
             value={user.username}
             onChange={handleChange}
             name="username"
             className="form-control "
           />
-        </div>
-        <div className="mb-3 col-sm-6" style={{ marginTop: "15%" }}>
-          <h3
-            className="form-label"
-            style={{ color: "red", fontWeight: "bold " }}
-          >
-            Password :
-          </h3>
-          <input
-            style={{ marginLeft: "50%" }}
+        </SignIn1Div>
+        <SignIn2Div className="mb-3 col-sm-6">
+          <SignH className="form-label">Password :</SignH>
+          <SignInInput
             type="password"
             value={user.password}
             onChange={handleChange}
             name="password"
             className="form-control"
           />
-        </div>
+        </SignIn2Div>
       </Center>
-      <Button type="submit" className="btn btn-danger">
+      <SignInButton type="submit" className="btn btn-danger">
         Log in
-      </Button>
+      </SignInButton>
       <Link to="/signup">
-        <h6 style={{ textAlign: "center" }}>
-          Don't have account? Register Now
-        </h6>
+        <SignInSpecialH>Don't have account? Register Now</SignInSpecialH>
       </Link>
     </form>
   );
