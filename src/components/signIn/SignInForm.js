@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+
 //store
 import { signIn } from "../../store/actions/authActions";
 //styles
@@ -58,7 +58,7 @@ const SignInForm = () => {
         Log in
       </SignInButton>
       <Link to="/signup">
-        <SignInSpecialH>Don't have account? Register Now</SignInSpecialH>
+        <SignInSpecialH>Don't have account ? Register Now</SignInSpecialH>
       </Link>
     </form>
   );
