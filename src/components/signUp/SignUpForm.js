@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+
 //store
 import { signUp } from "../../store/actions/authActions";
 //styles
@@ -11,6 +12,7 @@ import {
   SignUp1Div,
   SignUp2Div,
   SignUpInput,
+  SignInSpecialH,
 } from "../../styles";
 
 const SignUpForm = () => {
@@ -66,6 +68,9 @@ const SignUpForm = () => {
       <SignupButton type="submit" className="btn btn-danger">
         Create
       </SignupButton>
+      <Link to="/signin">
+        <SignInSpecialH>Already registerd ? Log In</SignInSpecialH>
+      </Link>
     </form>
   );
 };

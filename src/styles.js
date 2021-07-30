@@ -20,10 +20,12 @@ export const Button = styled.button`
   margin-left: 43.5%;
   margin-top: 5%;
 `;
+//Room
 export const RoomMasterDiv = styled.div`
-  width: 70%;
-  position: absolute;
-  left: 30%;
+  width: 65%;
+  /* position: absolute; */
+  /* left: 35%; */
+  float: right;
 `;
 export const RoomSecondDiv = styled.div`
   /* border: 15px solid red; */
@@ -31,8 +33,8 @@ export const RoomSecondDiv = styled.div`
   width: 100%;
   background: linear-gradient(
     180deg,
-    rgba(250, 3, 3, 0.61) 99.99%,
-    rgba(241, 27, 27, 0) 100%
+    rgba(247, 231, 87, 0.87) 69.79%,
+    rgba(234, 218, 66, 0) 100%
   );
 `;
 export const RoomImage = styled.img`
@@ -164,8 +166,14 @@ export const InputImojiDiv = styled.div`
   top: 95.2%;
   z-index: -1;
 `;
-export const MessageBoxP = styled.p`
-  background-color: #f48444;
+export const MessageBoxP = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(222, 148, 3, 0.52) 0%,
+    rgba(222, 148, 3, 0.2275) 54.17%,
+    rgba(222, 148, 3, 0.0896212) 99.99%,
+    rgba(222, 148, 3, 0) 100%
+  );
   width: auto;
   height: auto;
   border-radius: 5%;
@@ -190,4 +198,69 @@ export const MessageImage = styled.img`
 `;
 export const ImageDisNone = styled.img`
   display: none;
+`;
+//CreateNewChat
+export const SideBMasterDiv = styled.div`
+  width: 30%;
+  position: absolute;
+  /* right: 85%; */
+  top: 4%;
+  background-color: red;
+  /* margin: 10%; */
+  width: 150px;
+  height: 150px;
+  border-radius: 70%;
+`;
+export const GroupIconDiv = styled.div`
+  margin-top: 9%;
+  /* width: 25%; */
+  margin: 5%;
+`;
+export const PStyle = styled.p`
+  margin-top: 70%;
+  margin-left: 9%;
+  vertical-align: middle;
+`;
+//ChatList
+export const ChatListMasterDiv = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(247, 231, 87, 0.87) 69.79%,
+    rgba(234, 218, 66, 0) 100%
+  );
+
+  width: 35%;
+  position: absolute;
+
+  float: left;
+`;
+export const ChatListIconDiv = styled.div`
+  margin-top: 3%;
+`;
+export const ChatListImage = styled.img`
+  position: absolute;
+  width: 90px;
+  height: 90px;
+`;
+export const ChatListH = styled.h4`
+  color: red;
+  margin-left: 30%;
+  margin-top: 0%;
+`;
+export const ChatListInp = styled.input`
+  background-color: red;
+  width: 80%;
+  color: white;
+  margin-top: 9.5%;
+  margin-left: 14%;
+`;
+// export const ChatListDiv2 = styled.div``;
+//BackgroundColor
+export const BackgroundDiv = styled.div`
+  width: 30%;
+  background-color: red;
+`;
+//FullPage
+export const FullPageDiv = styled.div`
+  /* display: flex; */
 `;

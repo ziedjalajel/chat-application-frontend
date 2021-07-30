@@ -7,6 +7,7 @@ import Profile from "../../Picture1.png";
 import { BsTrash, BsHeart } from "react-icons/bs";
 import { RoomMasterDiv, RoomSecondDiv, RoomImage } from "../../styles";
 // components
+import BackGroundColor from "./sideBarContact/BackGroungColor";
 import MessageForm from "./messages/MessageForm";
 import MessageList from "./messages/MessageList";
 import { signOut } from "../../store/actions/authActions";
@@ -23,48 +24,50 @@ function Room() {
   const handleSignOut = () => dispatch(signOut(history));
 
   return (
-    <RoomMasterDiv>
-      <RoomSecondDiv>
-        <h1>Chat name </h1>
-        <Link to="/">
-          <button
-            type="button"
-            className="btn btn-danger"
-            onClick={handleSignOut}
-          >
-            Log Out
-          </button>
-        </Link>
-        <RoomImage src={Profile} />
+    <>
+      <RoomMasterDiv>
+        <RoomSecondDiv>
+          <h1>Chat name </h1>
+          <Link to="/">
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={handleSignOut}
+            >
+              Log Out
+            </button>
+          </Link>
+          <RoomImage src={Profile} />
 
-        <BsTrash
-          style={{
-            position: "absolute",
-            width: "30px",
-            height: "30px",
-            left: "93%",
-            right: "0.9%",
-            top: " 10px",
-            bottom: " 90.23%",
-          }}
-        />
+          <BsTrash
+            style={{
+              position: "absolute",
+              width: "30px",
+              height: "30px",
+              left: "93%",
+              right: "0.9%",
+              top: " 10px",
+              bottom: " 90.23%",
+            }}
+          />
 
-        <BsHeart
-          style={{
-            position: "absolute",
-            width: "30px",
-            height: "30px",
-            left: "93%",
-            right: "0.9%",
-            top: " 50px",
-          }}
-        />
-      </RoomSecondDiv>
-      <div className="BigDiv">
-        <MessageList messages={messages} />
-      </div>
-      <MessageForm />
-    </RoomMasterDiv>
+          <BsHeart
+            style={{
+              position: "absolute",
+              width: "30px",
+              height: "30px",
+              left: "93%",
+              right: "0.9%",
+              top: " 50px",
+            }}
+          />
+        </RoomSecondDiv>
+        <div className="BigDiv">
+          <MessageList messages={messages} />
+        </div>
+        <MessageForm />
+      </RoomMasterDiv>
+    </>
   );
 }
 
