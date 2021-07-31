@@ -4,7 +4,12 @@ import { useDispatch } from "react-redux";
 import InputEmoji from "react-input-emoji";
 //styling
 import { IoMdAttach, IoMdSend } from "react-icons/io";
-import { InputImojiDiv, SendIconDiv, AttachIconDiv } from "../../../styles";
+import {
+  InputImojiDiv,
+  SendIconDiv,
+  AttachIconDiv,
+  ButtonAtt,
+} from "../../../styles";
 //action
 import { addMessage } from "../../../store/actions/messageActions";
 
@@ -47,10 +52,9 @@ const MessageForm = () => {
       </InputImojiDiv>
       <SendIconDiv type="button " onClick={handleOnEnter}>
         <IoMdSend
-          className="Send"
           style={{
-            width: "26px",
-            height: "26px",
+            width: "40px",
+            height: "30px",
           }}
         />
       </SendIconDiv>
@@ -72,7 +76,7 @@ const MessageForm = () => {
               />
             </AttachIconDiv>
           </label>
-          <button type="submit " onSubmit={handleSubmit}></button>
+          <ButtonAtt type="submit " onSubmit={handleSubmit}></ButtonAtt>
         </form>
       </div>
     </div>

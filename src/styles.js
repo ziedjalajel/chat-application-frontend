@@ -23,13 +23,11 @@ export const Button = styled.button`
 //Room
 export const RoomMasterDiv = styled.div`
   width: 65%;
-  /* position: absolute; */
-  /* left: 35%; */
   float: right;
 `;
 export const RoomSecondDiv = styled.div`
-  /* border: 15px solid red; */
   background-color: red;
+  height: 83px;
   width: 100%;
   background: linear-gradient(
     180deg,
@@ -44,6 +42,12 @@ export const RoomImage = styled.img`
   left: 84%;
   top: 1px;
 `;
+export const RoomScroll = styled.div`
+  width: 100%;
+  height: 600px;
+  overflow-y: auto;
+`;
+
 // export const RoomTrashIcon = styled.BsTrash`
 //   position: absolute;
 //   width: 30px;
@@ -143,28 +147,35 @@ export const SignInSpecialH = styled.h6`
   font-weight: bold;
   font-style: italic;
 `;
+//MessageForm
 export const SendIconDiv = styled.div`
-  position: absolute;
-  left: 93%;
-  right: 0.9%;
-  top: 97.5%;
+  width: 30px;
+  margin-top: -4%;
   cursor: pointer;
-  size: 250%;
+  size: 200%;
+  margin-left: 95%;
+  z-index: 1;
+  /* padding-right: 0.1%; */
 `;
 export const AttachIconDiv = styled.div`
   position: absolute;
-  width: 40px;
+  width: 30px;
   height: 40px;
-  left: 90%;
-  right: 0.9%;
-  top: 97.5%;
+  left: 94.5%;
+  top: 92.5%;
   cursor: pointer;
   z-index: 1;
-  padding-right: 0.5%;
 `;
 export const InputImojiDiv = styled.div`
   top: 95.2%;
-  z-index: -1;
+  margin-right: 8%;
+`;
+export const ButtonAtt = styled.button`
+  position: absolute;
+  right: 1.8%;
+  top: 94%;
+  background-color: rgb(33, 37, 41);
+  border: none;
 `;
 export const MessageBoxP = styled.div`
   background: linear-gradient(
@@ -200,26 +211,61 @@ export const ImageDisNone = styled.img`
   display: none;
 `;
 //CreateNewChat
-export const SideBMasterDiv = styled.div`
-  width: 30%;
+export const BGDiv = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(247, 231, 87, 0.87) 69.79%,
+    rgba(234, 218, 66, 0) 100%
+  );
+  width: 35%;
   position: absolute;
-  /* right: 85%; */
-  top: 4%;
+  float: left;
+  height: 100%;
+`;
+export const SideBMasterDiv = styled.div`
+  width: 35%;
+  position: absolute;
+  top: 6%;
   background-color: red;
-  /* margin: 10%; */
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 70%;
+  left: 8%;
+  /* background: linear-gradient(
+    180deg,
+    rgba(247, 231, 87, 0.87) 69.79%,
+    rgba(234, 218, 66, 0) 100%
+  ); */
 `;
 export const GroupIconDiv = styled.div`
   margin-top: 9%;
-  /* width: 25%; */
-  margin: 5%;
+  margin: 8%;
+  width: 50px;
 `;
 export const PStyle = styled.p`
   margin-top: 70%;
   margin-left: 9%;
   vertical-align: middle;
+`;
+export const PlusIconDiv = styled.div`
+  position: absolute;
+  left: 380%;
+  top: 5%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+`;
+export const P2Style = styled.p`
+  margin-top: 70%;
+  vertical-align: middle;
+  color: black;
+`;
+export const NewChattInp = styled.input`
+  background-color: red;
+  width: 400%;
+  color: white;
+  margin-top: 50%;
+  margin-left: 80%;
 `;
 //ChatList
 export const ChatListMasterDiv = styled.div`
@@ -264,3 +310,69 @@ export const BackgroundDiv = styled.div`
 export const FullPageDiv = styled.div`
   /* display: flex; */
 `;
+//profile
+export const ProfileBGDiv = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(247, 231, 87, 0.68) 0%,
+    rgba(234, 218, 66, 0.41) 52.4%,
+    rgba(234, 218, 66, 0.55) 82.27%
+  );
+  width: 35%;
+  position: absolute;
+  float: left;
+  height: 100%;
+`;
+export const ProfilePicImg = styled.img`
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  right: 38%;
+  top: 5%;
+`;
+export const ProfileUserDiv = styled.div`
+  position: absolute;
+  top: 29%;
+  left: 30%;
+`;
+export const ProfileUserH = styled.h2`
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+`;
+export const ProfileBioH = styled.h3`
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+  position: absolute;
+  top: 37%;
+  left: 41%;
+`;
+export const SignOutBtn = styled.button`
+  position: fixed;
+  top: 65%;
+  left: 9%;
+  font-size: xx-large;
+  width: 200px;
+  height: 90px;
+  border-radius: 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 0, 0, 0.42) 32.38%,
+    rgba(249, 0, 0, 0) 100%
+  );
+`;
+//Settings
+export const SettingsMasterDiv = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 65%;
+  float: right;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 231, 87, 0.68) 0%,
+    rgba(234, 218, 66, 0.41) 52.4%,
+    rgba(234, 218, 66, 0.55) 82.27%
+  );
+`;
+//SettingsFullPage

@@ -7,7 +7,7 @@ export const signUp = (userData, history) => {
     try {
       const res = await instance.post("/signup", userData);
       dispatch(setUser(res.data.token));
-      history.push("/chatroom");
+      history.push("/room");
     } catch (error) {
       console.log(error);
     }
@@ -20,7 +20,7 @@ export const signIn = (userData, history) => {
       const res = await instance.post("/signin", userData);
       console.log("res", decode(res.data.token));
       dispatch(setUser(res.data.token));
-      history.push("/chatroom");
+      history.push("/room");
     } catch (error) {
       console.log(error);
     }
