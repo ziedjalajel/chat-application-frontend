@@ -365,14 +365,109 @@ export const SignOutBtn = styled.button`
 //Settings
 export const SettingsMasterDiv = styled.div`
   position: absolute;
+  float: right;
   height: 100%;
   width: 65%;
-  float: right;
   background: linear-gradient(
     180deg,
     rgba(247, 231, 87, 0.68) 0%,
     rgba(234, 218, 66, 0.41) 52.4%,
     rgba(234, 218, 66, 0.55) 82.27%
   );
+  left: 35%;
 `;
 //SettingsFullPage
+export const SettingsImage = styled.img`
+  position: absolute;
+  right: 2%;
+  height: 280px;
+  width: 280px;
+`;
+export const SettingsUserDiv = styled.div`
+  position: absolute;
+  left: 18.4%;
+  top: 10%;
+`;
+export const SettingsUserH = styled.h1`
+  color: red;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+`;
+export const SettingsButton1 = styled.button`
+  color: white;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  height: 60px;
+  width: 160;
+  border-radius: 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 0, 0, 0.42) 32.38%,
+    rgba(249, 0, 0, 0) 100%
+  );
+`;
+export const SettingsBioH = styled.h2`
+  position: absolute;
+  top: 32%;
+  left: 5%;
+  color: red;
+`;
+export const SettingsBioInp = styled.input`
+  margin-top: 24.6%;
+  margin-left: 12%;
+  border: none;
+  height: 120px;
+  width: 450px;
+`;
+export const SettingsPass1Inp = styled.input`
+  margin-left: 28%;
+  margin-top: 4%;
+  width: 294px;
+  border: none;
+`;
+export const SettingsPassH1 = styled.h2`
+  position: absolute;
+  top: 53.5%;
+  left: 5%;
+  color: red;
+`;
+export const SettingsPass2Inp = styled.input`
+  margin-left: 28%;
+  margin-top: 4%;
+  width: 294px;
+  border: none;
+`;
+export const SettingsPassH2 = styled.h2`
+  position: absolute;
+  top: 62%;
+  left: 5%;
+  color: red;
+`;
+export const SettingsPass3Inp = styled.input`
+  margin-left: 33%;
+  margin-top: 4%;
+  width: 245px;
+  border: none;
+`;
+export const SettingsPass3H = styled.h2`
+  position: absolute;
+  top: 70.8%;
+  left: 5%;
+  color: red;
+`;
+export const SettingsPass2Btn = styled.button`
+  color: white;
+  position: absolute;
+  left: 60%;
+  top: 85%;
+  height: 60px;
+  width: 160;
+  border-radius: 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 0, 0, 0.42) 32.38%,
+    rgba(249, 0, 0, 0) 100%
+  );
+`;

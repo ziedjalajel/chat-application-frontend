@@ -34,8 +34,9 @@ const MessageForm = () => {
     dispatch(addMessage(message));
     console.log(message);
   };
-  const handleAttachment = (event) =>
-    setMessage({ ...message, image: event.target.files[0] });
+  const handleAttachment = (event) => {
+    dispatch(addMessage({ ...message, image: event.target.files[0] }));
+  };
 
   return (
     <div>
