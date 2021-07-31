@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+//styles
 import {
   ChatListMasterDiv,
   ChatListImage,
@@ -9,10 +12,11 @@ import Profile from "../../../Picture1.png";
 import { FaRegCircle } from "react-icons/fa";
 import { SiGooglemessages } from "react-icons/si";
 import { AiOutlineBars } from "react-icons/ai";
+import { AiFillSetting } from "react-icons/ai";
 
 //components
 import BackGroundColor from "./BackGroungColor";
-//ToDo : input * 2 y?
+//ToDo : link the Link with The settings after finishing the settings component
 const ChatList = () => {
   return (
     <ChatListMasterDiv>
@@ -28,35 +32,34 @@ const ChatList = () => {
             marginLeft: "19%",
           }}
         />
-        <SiGooglemessages
-          style={{
-            position: "absolute",
-            color: "red",
-            height: "35px",
-            width: "35px",
-            top: "2%",
-            left: "84%",
-          }}
-        />
-        <AiOutlineBars
-          style={{
-            position: "absolute",
-            color: "red",
-            left: "92%",
-            top: "1.5%",
-            height: "40px",
-            width: "40px",
-          }}
-        />
+        <Link to="/newchat">
+          <SiGooglemessages
+            style={{
+              position: "absolute",
+              color: "red",
+              height: "35px",
+              width: "35px",
+              top: "2%",
+              left: "84%",
+            }}
+          />
+        </Link>
       </ChatListIconDiv>
       <ChatListInp />
-      <ChatListInp />
-      <ChatListInp />
-      <ChatListInp />
-      <ChatListInp />
-      <ChatListInp />
-      <ChatListInp />
-      <ChatListInp />
+      <div>
+        <Link to="/profile-settings">
+          <AiFillSetting
+            style={{
+              position: "absolute",
+              color: "red",
+              left: "92%",
+              top: "1.5%",
+              height: "40px",
+              width: "40px",
+            }}
+          />
+        </Link>
+      </div>
     </ChatListMasterDiv>
   );
 };

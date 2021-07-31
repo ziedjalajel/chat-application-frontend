@@ -5,7 +5,12 @@ import { Redirect, Link, useHistory } from "react-router-dom";
 import "./Room.css";
 import Profile from "../../Picture1.png";
 import { BsTrash, BsHeart } from "react-icons/bs";
-import { RoomMasterDiv, RoomSecondDiv, RoomImage } from "../../styles";
+import {
+  RoomMasterDiv,
+  RoomSecondDiv,
+  RoomImage,
+  RoomScroll,
+} from "../../styles";
 // components
 import BackGroundColor from "./sideBarContact/BackGroungColor";
 import MessageForm from "./messages/MessageForm";
@@ -28,7 +33,7 @@ function Room() {
       <RoomMasterDiv>
         <RoomSecondDiv>
           <h1>Chat name </h1>
-          <Link to="/">
+          {/* <Link to="/">
             <button
               type="button"
               className="btn btn-danger"
@@ -36,7 +41,7 @@ function Room() {
             >
               Log Out
             </button>
-          </Link>
+          </Link> */}
           <RoomImage src={Profile} />
 
           <BsTrash
@@ -62,9 +67,9 @@ function Room() {
             }}
           />
         </RoomSecondDiv>
-        <div className="BigDiv">
+        <RoomScroll className="BigDiv">
           <MessageList messages={messages} />
-        </div>
+        </RoomScroll>
         <MessageForm />
       </RoomMasterDiv>
     </>
