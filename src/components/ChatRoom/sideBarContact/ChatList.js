@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
-
 //styles
 import {
   ChatListMasterDiv,
   ChatListImage,
   ChatListIconDiv,
   ChatListH,
-  ChatListInp,
   ChatListDiv,
 } from "../../../styles";
 import Profile from "../../../Picture1.png";
 import { FaRegCircle } from "react-icons/fa";
 import { SiGooglemessages } from "react-icons/si";
 import { AiFillSetting } from "react-icons/ai";
+//components
+import ChatListComponent from "../chats";
 
-const ChatList = () => {
+const ChatList = ({ chat }) => {
   return (
     <ChatListMasterDiv>
       <ChatListImage src={Profile} />
@@ -42,7 +42,6 @@ const ChatList = () => {
           />
         </Link>
       </ChatListIconDiv>
-      <ChatListInp />
       <div>
         <Link to="/profile-settings">
           <AiFillSetting
@@ -58,21 +57,7 @@ const ChatList = () => {
         </Link>
       </div>
       <ChatListDiv>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
-        <h1>blahblah</h1>
+        <ChatListComponent />
       </ChatListDiv>
     </ChatListMasterDiv>
   );

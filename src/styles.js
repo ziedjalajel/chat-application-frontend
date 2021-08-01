@@ -287,8 +287,9 @@ export const ChatListH = styled.h4`
 `;
 export const ChatListInp = styled.input`
   background-color: red;
-  width: 80%;
+  width: 78%;
   color: white;
+  font-size: large;
   margin-top: 9.5%;
   margin-left: 14%;
 `;
@@ -465,4 +466,16 @@ export const SettingsPass2Btn = styled.button`
     rgba(249, 0, 0, 0.42) 32.38%,
     rgba(249, 0, 0, 0) 100%
   );
+`;
+//CHatItem
+export const ChatItemImage = styled.img`
+  height: 70px;
+  width: 70px;
+  display: flex;
+  margin-right: 10px;
+  border-radius: 7%;
+`;
+export const ChatItemDiv = styled.div`
+  display: flex;
+  margin-bottom: 10px;
 `;
