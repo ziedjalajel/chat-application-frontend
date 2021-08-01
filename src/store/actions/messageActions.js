@@ -17,12 +17,12 @@ export const fetchMessages = () => {
   };
 };
 
-export const addMessage = (newMessage) => {
+export const addMessage = (newMessage, chatId) => {
   return async (dispatch) => {
     try {
       const formData = new FormData();
       for (const key in newMessage) formData.append(key, newMessage[key]);
-      const res = await instance.post("/messages", formData);
+      const res = await instance.post(`/chats/${chatId}/messages`, formData);
       dispatch({
         type: actionTypes.ADD_MESSAGE,
         payload: { newMessage: res.data },

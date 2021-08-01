@@ -6,10 +6,14 @@ import Home from "./Home";
 import FullPage from "./FullPage/FullPage";
 import NewChatFullPage from "./FullPage/NewChatFullPage";
 import SettingsFullPage from "./FullPage/SettingsFullPage";
+import ChatList from "./ChatRoom/sideBarContact/ChatList";
 
 const Routes = () => {
   return (
     <Switch>
+      <Route path={`/chat/:chatSlug/room`}>
+        <FullPage />
+      </Route>
       <Route path="/signup">
         <SignUpForm />
       </Route>
@@ -22,8 +26,8 @@ const Routes = () => {
       <Route path="/newchat">
         <NewChatFullPage />
       </Route>
-      <Route path="/room">
-        <FullPage />
+      <Route path="/chats">
+        <ChatList />
       </Route>
       <Route exact path="/">
         <Home />
