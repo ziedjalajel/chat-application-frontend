@@ -45,18 +45,12 @@ export const RoomImage = styled.img`
 export const RoomScroll = styled.div`
   width: 100%;
   height: 600px;
-  overflow-y: auto;
+  overflow: auto;
+`;
+export const RoomScrollFScroll = styled.div`
+  /* overflow-y: auto; */
 `;
 
-// export const RoomTrashIcon = styled.BsTrash`
-//   position: absolute;
-//   width: 30px;
-//   height: 30px;
-//   left: 93%;
-//   right: 0.9%;
-//   top: 10px;
-//   bottom: 90.23%;
-// `;
 export const HomeDiv = styled.div`
   margin-top: 15%;
   flex-direction: column;
@@ -274,10 +268,8 @@ export const ChatListMasterDiv = styled.div`
     rgba(247, 231, 87, 0.87) 69.79%,
     rgba(234, 218, 66, 0) 100%
   );
-
   width: 35%;
   position: absolute;
-
   float: left;
 `;
 export const ChatListIconDiv = styled.div`
@@ -300,7 +292,10 @@ export const ChatListInp = styled.input`
   margin-top: 9.5%;
   margin-left: 14%;
 `;
-// export const ChatListDiv2 = styled.div``;
+export const ChatListDiv = styled.div`
+  overflow-y: auto;
+  height: 580px;
+`;
 //BackgroundColor
 export const BackgroundDiv = styled.div`
   width: 30%;
@@ -370,9 +365,9 @@ export const SettingsMasterDiv = styled.div`
   width: 65%;
   background: linear-gradient(
     180deg,
-    rgba(247, 231, 87, 0.68) 0%,
-    rgba(234, 218, 66, 0.41) 52.4%,
-    rgba(234, 218, 66, 0.55) 82.27%
+    rgba(255, 230, 0, 0.32) 0%,
+    rgba(248, 239, 36, 0) 100%,
+    rgba(250, 255, 0, 0.32) 100%
   );
   left: 35%;
 `;

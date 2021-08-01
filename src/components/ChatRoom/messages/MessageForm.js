@@ -15,7 +15,7 @@ import { addMessage } from "../../../store/actions/messageActions";
 
 const MessageForm = () => {
   const dispatch = useDispatch();
-  const [message, setMessage] = useState({
+  const [message] = useState({
     image: "",
   });
 
