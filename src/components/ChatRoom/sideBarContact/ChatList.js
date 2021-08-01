@@ -7,16 +7,13 @@ import {
   ChatListIconDiv,
   ChatListH,
   ChatListInp,
+  ChatListDiv,
 } from "../../../styles";
 import Profile from "../../../Picture1.png";
 import { FaRegCircle } from "react-icons/fa";
 import { SiGooglemessages } from "react-icons/si";
-import { AiOutlineBars } from "react-icons/ai";
 import { AiFillSetting } from "react-icons/ai";
 
-//components
-import BackGroundColor from "./BackGroungColor";
-//ToDo : link the Link with The settings after finishing the settings component
 const ChatList = () => {
   return (
     <ChatListMasterDiv>
@@ -60,6 +57,23 @@ const ChatList = () => {
           />
         </Link>
       </div>
+      <ChatListDiv>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+        <h1>blahblah</h1>
+      </ChatListDiv>
     </ChatListMasterDiv>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Redirect, Link, useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Redirect } from "react-router-dom";
 // styling
 import "./Room.css";
 import Profile from "../../Picture1.png";
@@ -10,40 +10,25 @@ import {
   RoomSecondDiv,
   RoomImage,
   RoomScroll,
+  RoomScrollFScroll,
 } from "../../styles";
 // components
-import BackGroundColor from "./sideBarContact/BackGroungColor";
 import MessageForm from "./messages/MessageForm";
 import MessageList from "./messages/MessageList";
-import { signOut } from "../../store/actions/authActions";
 //ToDo
 //for the icons(heart,trash)most probably we will move them to sittings icon thats why we didn't fix the inline styling (for now laila)
 function Room() {
-  const dispatch = useDispatch();
-  const history = useHistory();
   const messages = useSelector((state) => state.messageReducer.messages);
   const token = useSelector((state) => state.authReducer.user);
 
   if (!token) return <Redirect to="/" />;
-
-  const handleSignOut = () => dispatch(signOut(history));
 
   return (
     <>
       <RoomMasterDiv>
         <RoomSecondDiv>
           <h1>Chat name </h1>
-          {/* <Link to="/">
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={handleSignOut}
-            >
-              Log Out
-            </button>
-          </Link> */}
           <RoomImage src={Profile} />
-
           <BsTrash
             style={{
               position: "absolute",
@@ -55,7 +40,6 @@ function Room() {
               bottom: " 90.23%",
             }}
           />
-
           <BsHeart
             style={{
               position: "absolute",
@@ -67,8 +51,10 @@ function Room() {
             }}
           />
         </RoomSecondDiv>
-        <RoomScroll className="BigDiv">
-          <MessageList messages={messages} />
+        <RoomScroll>
+          <RoomScrollFScroll>
+            <MessageList messages={messages} />
+          </RoomScrollFScroll>
         </RoomScroll>
         <MessageForm />
       </RoomMasterDiv>
