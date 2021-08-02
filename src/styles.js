@@ -325,6 +325,7 @@ export const ProfilePicImg = styled.img`
   width: 170px;
   right: 38%;
   top: 5%;
+  border-radius: 50%;
 `;
 export const ProfileUserDiv = styled.div`
   position: absolute;
@@ -336,13 +337,14 @@ export const ProfileUserH = styled.h2`
   font-style: italic;
   color: red;
 `;
-export const ProfileBioH = styled.h3`
+export const ProfileBioH = styled.h4`
   font-weight: bold;
   font-style: italic;
   color: red;
   position: absolute;
   top: 37%;
-  left: 41%;
+  left: 14%;
+  /* width: 40%; */
 `;
 export const SignOutBtn = styled.button`
   position: fixed;
@@ -378,6 +380,7 @@ export const SettingsImage = styled.img`
   right: 2%;
   height: 280px;
   width: 280px;
+  border-radius: 50%;
 `;
 export const SettingsUserDiv = styled.div`
   position: absolute;
@@ -390,13 +393,13 @@ export const SettingsUserH = styled.h1`
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
 `;
-export const SettingsButton1 = styled.button`
+export const SettingsImgInp = styled.input`
   color: white;
   position: absolute;
   left: 20%;
   top: 20%;
   height: 60px;
-  width: 160;
+  width: 250px;
   border-radius: 5%;
   background: linear-gradient(
     180deg,
@@ -414,12 +417,13 @@ export const SettingsBioInp = styled.input`
   margin-top: 24.6%;
   margin-left: 12%;
   border: none;
-  height: 120px;
+  height: 90px;
   width: 450px;
 `;
 export const SettingsPass1Inp = styled.input`
-  margin-left: 28%;
-  margin-top: 4%;
+  position: absolute;
+  left: 28.5%;
+  top: 54.5%;
   width: 294px;
   border: none;
 `;
@@ -430,8 +434,9 @@ export const SettingsPassH1 = styled.h2`
   color: red;
 `;
 export const SettingsPass2Inp = styled.input`
-  margin-left: 28%;
-  margin-top: 4%;
+  position: absolute;
+  left: 28.5%;
+  top: 63%;
   width: 294px;
   border: none;
 `;
@@ -442,9 +447,10 @@ export const SettingsPassH2 = styled.h2`
   color: red;
 `;
 export const SettingsPass3Inp = styled.input`
-  margin-left: 33%;
-  margin-top: 4%;
-  width: 245px;
+  position: absolute;
+  left: 33%;
+  top: 71.5%;
+  width: 250px;
   border: none;
 `;
 export const SettingsPass3H = styled.h2`
@@ -467,15 +473,28 @@ export const SettingsPass2Btn = styled.button`
     rgba(249, 0, 0, 0) 100%
   );
 `;
+export const ChangeImageBtn = styled.button`
+  color: white;
+  position: absolute;
+  height: 60px;
+  width: 160;
+  border-radius: 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 0, 0, 0.42) 32.38%,
+    rgba(249, 0, 0, 0) 100%
+  );
+`;
 //CHatItem
 export const ChatItemImage = styled.img`
   height: 70px;
   width: 70px;
   display: flex;
   margin-right: 10px;
-  border-radius: 7%;
+  border-radius: 50%;
 `;
 export const ChatItemDiv = styled.div`
   display: flex;
   margin-bottom: 10px;
+  margin-top: 10px;
 `;

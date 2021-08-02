@@ -25,14 +25,14 @@ const MessageForm = () => {
   };
 
   function handleOnEnter(event) {
-    console.log(text);
+    // console.log(text);
     resetForm();
     dispatch(addMessage({ text }));
   }
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addMessage(message));
-    console.log(message);
+    // console.log(message);
   };
   const handleAttachment = (event) => {
     dispatch(addMessage({ ...message, image: event.target.files[0] }));
@@ -67,7 +67,7 @@ const MessageForm = () => {
                 name="image"
                 type="file"
                 onChange={handleAttachment}
-                className="form-control"
+                className="attachment"
               />
               <IoMdAttach
                 style={{
