@@ -279,6 +279,8 @@ export const ChatListImage = styled.img`
   position: absolute;
   width: 90px;
   height: 90px;
+  border-radius: 50%;
+  padding: 5px;
 `;
 export const ChatListH = styled.h4`
   color: red;
@@ -381,6 +383,7 @@ export const SettingsImage = styled.img`
   height: 280px;
   width: 280px;
   border-radius: 50%;
+  padding: 20px;
 `;
 export const SettingsUserDiv = styled.div`
   position: absolute;

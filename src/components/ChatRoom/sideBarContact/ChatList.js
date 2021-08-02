@@ -1,6 +1,6 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
 //styles
 import {
   ChatListMasterDiv,
@@ -15,9 +15,15 @@ import { SiGooglemessages } from "react-icons/si";
 import { AiFillSetting } from "react-icons/ai";
 //components
 import ChatListComponent from "../chats";
+import { fetchProfiles } from "../../../store/actions/authActions";
 
 const ChatList = ({ chat }) => {
   const users = useSelector((state) => state.authReducer.user);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log("user id :", users.id);
+    dispatch(fetchProfiles(users.id));
+  }, []);
 
   return (
     <ChatListMasterDiv>
