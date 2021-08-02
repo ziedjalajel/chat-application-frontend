@@ -13,7 +13,7 @@ import {
 //action
 import { addMessage } from "../../../store/actions/messageActions";
 
-const MessageForm = () => {
+const MessageForm = ({ id }) => {
   const dispatch = useDispatch();
   const [message] = useState({
     image: "",
@@ -27,15 +27,15 @@ const MessageForm = () => {
   function handleOnEnter(event) {
     // console.log(text);
     resetForm();
-    dispatch(addMessage({ text }));
+    dispatch(addMessage({ text }, id));
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addMessage(message));
+    dispatch(addMessage(message), id);
     // console.log(message);
   };
   const handleAttachment = (event) => {
-    dispatch(addMessage({ ...message, image: event.target.files[0] }));
+    dispatch(addMessage({ ...message, image: event.target.files[0] }, id));
   };
 
   return (
@@ -77,7 +77,7 @@ const MessageForm = () => {
               />
             </AttachIconDiv>
           </label>
-          <ButtonAtt type="submit " onSubmit={handleSubmit}></ButtonAtt>
+          {/* <ButtonAtt type="submit " onSubmit={handleSubmit}></ButtonAtt> */}
         </form>
       </div>
     </div>
