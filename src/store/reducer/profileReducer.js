@@ -11,6 +11,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         profiles: action.payload,
+
         loading: false,
       };
 
@@ -22,11 +23,10 @@ const reducer = (state = initialState, action) => {
       };
     case actionTypes.UPDATE_PROFILE:
       const { updatedProfile } = action.payload;
+      console.log(state.profiles);
       return {
         ...state,
-        profiles: state.profiles.map((profile) =>
-          profile.id === updatedProfile.id ? updatedProfile : profile
-        ),
+        profiles: updatedProfile,
       };
     default:
       return state;

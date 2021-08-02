@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 
 //components
 import ChatItem from "./ChatItem";
 import SearchBar from "../SearchBar";
-import FullPage from "../../FullPage/FullPage";
 
 const ChatListComponent = () => {
   const [query, setQuery] = useState("");

@@ -6,8 +6,9 @@ export const signUp = (userData, history) => {
   return async (dispatch) => {
     try {
       const res = await instance.post("/signup", userData);
+      // dispatch(addProfile({ userId: res.data.id }));
       dispatch(setUser(res.data.token));
-      history.push("/room");
+      history.push("/chats");
     } catch (error) {
       console.log(error);
     }
@@ -18,9 +19,9 @@ export const signIn = (userData, history) => {
   return async (dispatch) => {
     try {
       const res = await instance.post("/signin", userData);
-      console.log("res", decode(res.data.token));
+      // console.log("res", decode(res.data.token));
       dispatch(setUser(res.data.token));
-      history.push("/room");
+      history.push("/chats");
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +31,22 @@ export const signIn = (userData, history) => {
 export const signOut = (history) => {
   return setUser();
 };
-
+export const updateProfile = (updatedProfile, userId) => {
+  return async (dispatch) => {
+    try {
+      const formData = new FormData();
+      for (const key in updatedProfile)
+        formData.append(key, updatedProfile[key]);
+      const res = await instance.put(`/userprofile/${userId}`, formData);
+      dispatch({
+        type: actionTypes.UPDATE_PROFILE,
+        payload: { updatedProfile: res.data },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
 export const checkForToken = () => {
   const token = localStorage.getItem("myToken");
   if (token) {
@@ -40,16 +56,32 @@ export const checkForToken = () => {
   }
   return setUser();
 };
+export const fetchProfiles = (userId) => {
+  return async (dispatch) => {
+    try {
+      console.log("hello", userId);
+      const res = await instance.get(`/userprofile/${userId}`);
 
+      dispatch({
+        type: actionTypes.FETCH_PROFILES,
+        payload: res.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
 export const setUser = (token) => {
   if (token) {
     localStorage.setItem("myToken", token);
+    instance.defaults.headers.common.Authorization = `Bearer ${token}`;
     return {
       type: actionTypes.SET_USER,
       payload: decode(token),
     };
   } else {
     localStorage.removeItem("myToken");
+    delete instance.defaults.headers.common.Authorization;
     return {
       type: actionTypes.SET_USER,
       payload: null,

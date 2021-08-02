@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 //styles
 import {
   ChatListMasterDiv,
@@ -15,11 +17,17 @@ import { AiFillSetting } from "react-icons/ai";
 import ChatListComponent from "../chats";
 
 const ChatList = ({ chat }) => {
+  const users = useSelector((state) => state.authReducer.user);
+
   return (
     <ChatListMasterDiv>
-      <ChatListImage src={Profile} />
+      <ChatListImage src={users.image} alt={users.username} />
       <ChatListIconDiv type="button">
-        <ChatListH>Username</ChatListH>
+        {users && (
+          <>
+            <ChatListH>{users.username}</ChatListH>
+          </>
+        )}
 
         <FaRegCircle
           style={{

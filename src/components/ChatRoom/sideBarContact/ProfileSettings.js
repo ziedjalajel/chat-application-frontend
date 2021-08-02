@@ -1,5 +1,5 @@
-import { Link, useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { Link, useHistory, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 //styles
 import Profilepic from "../../../Picture1.png";
 import { BiArrowBack } from "react-icons/bi";
@@ -13,12 +13,22 @@ import {
 } from "../../../styles";
 //components
 import { signOut } from "../../../store/actions/authActions";
+import { fetchProfiles } from "../../../store/actions/authActions";
+import { useEffect } from "react";
 
 const ProfileSettings = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-
+  const { userId } = useParams();
+  const users = useSelector((state) => state.authReducer.user);
+  // .map((profile)=>)
   const handleSignOut = () => dispatch(signOut(history));
+  useEffect(() => {
+    console.log("user id :", users.id);
+    dispatch(fetchProfiles(users.id));
+  }, []);
+
+  // console.log("fetch profile :", profileData);
 
   return (
     <ProfileBGDiv>
@@ -31,12 +41,18 @@ const ProfileSettings = () => {
           }}
         />
       </Link>
-      <ProfilePicImg src={Profilepic} />
+
+      <ProfilePicImg src={users.image} alt={users.name} />
+
       <ProfileUserDiv className="container">
-        <ProfileUserH>Username</ProfileUserH>
+        {users && (
+          <>
+            <ProfileUserH>{users.username}</ProfileUserH>
+          </>
+        )}
       </ProfileUserDiv>
       <div className="container">
-        <ProfileBioH>Bio </ProfileBioH>
+        <ProfileBioH>{users.bio}</ProfileBioH>
       </div>
       <Link to="/">
         <SignOutBtn
