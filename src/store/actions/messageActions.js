@@ -18,6 +18,7 @@ export const fetchMessages = () => {
 };
 
 export const addMessage = (newMessage, chatId) => {
+  console.log(chatId, newMessage);
   return async (dispatch) => {
     try {
       const formData = new FormData();

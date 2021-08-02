@@ -11,7 +11,7 @@ import ChatList from "./ChatRoom/sideBarContact/ChatList";
 const Routes = () => {
   return (
     <Switch>
-      <Route path={`/chat/:chatSlug/room`}>
+      <Route path={`/chats/:chatSlug`}>
         <FullPage />
       </Route>
       <Route path="/signup">

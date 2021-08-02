@@ -1,10 +1,15 @@
 //component
+import { useSelector } from "react-redux";
 import Routes from "./components/Routes";
+import BeatLoader from "react-spinners/BeatLoader";
 
 function App() {
+  const loadingChats = useSelector((state) => state.chatReducer.loading);
+  const loadingMessages = useSelector((state) => state.messageReducer.loading);
+
   return (
     <>
-      <Routes />
+      {loadingChats || loadingMessages ? <BeatLoader size={10} /> : <Routes />}
     </>
   );
 }

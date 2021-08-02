@@ -19,16 +19,11 @@ import { useEffect } from "react";
 const ProfileSettings = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const { userId } = useParams();
   const users = useSelector((state) => state.authReducer.user);
-  // .map((profile)=>)
   const handleSignOut = () => dispatch(signOut(history));
   useEffect(() => {
-    console.log("user id :", users.id);
     dispatch(fetchProfiles(users.id));
   }, []);
-
-  // console.log("fetch profile :", profileData);
 
   return (
     <ProfileBGDiv>
