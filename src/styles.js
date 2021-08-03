@@ -580,3 +580,45 @@ export const AddChatBtn = styled.button`
   margin-top: 30%;
   left: 46%;
 `;
+//newgroupform
+export const CreateGroupLabel = styled.label`
+  position: absolute;
+  color: red;
+  font-size: xx-large;
+  margin-top: 10%;
+  left: 44%;
+  font-weight: bold;
+`;
+export const CreateGroupInpImg = styled.input`
+  position: absolute;
+  color: white;
+  background-color: red;
+  margin-top: 18%;
+  left: 35%;
+  font-weight: bold;
+  width: 450px;
+  border: none;
+`;
+export const CreateGroupInp = styled.input`
+  position: absolute;
+  color: white;
+  background-color: red;
+  margin-top: 26%;
+  left: 35%;
+  font-weight: bold;
+  width: 450px;
+  border: none;
+`;
+export const CreateGroupBtn = styled.button`
+  position: absolute;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 0, 0, 0.42) 32.38%,
+    rgba(249, 0, 0, 0) 100%
+  );
+  border: none;
+  margin-top: 35%;
+  left: 45%;
+  font-size: x-large;
+`;
