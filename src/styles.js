@@ -196,6 +196,28 @@ export const MessageBoxP = styled.div`
   margin-top: 2%;
   font-size: 22px;
   margin-right: 2%;
+  color: white;
+`;
+export const MessageBoxP2 = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(222, 148, 3, 0.52) 0%,
+    rgba(222, 148, 3, 0.2275) 54.17%,
+    rgba(222, 148, 3, 0.0896212) 99.99%,
+    rgba(222, 148, 3, 0) 100%
+  );
+  width: auto;
+  height: auto;
+  border-radius: 5%;
+  position: unset;
+  padding: 2%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  margin-right: 60%;
+  margin-top: 2%;
+  font-size: 22px;
+  margin-left: 2%;
+  color: white;
 `;
 export const DetailMesaageMasterDiv = styled.div`
   flex-direction: column;
@@ -207,6 +229,13 @@ export const MessageImage = styled.img`
   margin-left: 59%;
   padding: 1%;
 `;
+// export const MessageImage = styled.img`
+//   width: 300px;
+//   height: 300px;
+//   border-radius: 10%;
+//   margin-left: 59%;
+//   padding: 1%;
+// `;
 export const ImageDisNone = styled.img`
   display: none;
 `;

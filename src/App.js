@@ -2,6 +2,7 @@
 import { useSelector } from "react-redux";
 import Routes from "./components/Routes";
 import BeatLoader from "react-spinners/BeatLoader";
+import "./App.css";
 
 function App() {
   const loadingChats = useSelector((state) => state.chatReducer.loading);
