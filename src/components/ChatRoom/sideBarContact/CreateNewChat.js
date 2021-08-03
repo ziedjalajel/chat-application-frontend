@@ -16,7 +16,7 @@ import {
 const CreateNewChat = () => {
   return (
     <BGDiv>
-      <Link to="room">
+      <Link to="/chats">
         <BiArrowBack style={{ height: "40px", width: "40px", color: "red" }} />
       </Link>
       <SideBMasterDiv className="container">
@@ -40,13 +40,10 @@ const CreateNewChat = () => {
               position: "absolute",
               width: "50px",
               height: "50px",
-              // left: "100%",
-              // right: "80%",
               top: " 13%",
               color: "black",
               bottom: " 86%",
               marginBottom: "15px",
-              // backgroundColor: "red",
             }}
           />
           <P2Style>Add Chat</P2Style>

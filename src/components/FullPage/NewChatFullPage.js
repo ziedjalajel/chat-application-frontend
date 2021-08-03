@@ -8,7 +8,7 @@ const NewChatFullPage = () => {
   return (
     <FullPageDiv>
       <CreateNewChat />
-      <Room />
+      {/* <Room /> */}
     </FullPageDiv>
   );
 };

@@ -11,6 +11,7 @@ import {
   RoomImage,
   RoomScroll,
   RoomScrollFScroll,
+  RoomNameH,
 } from "../../styles";
 // components
 import MessageForm from "./messages/MessageForm";
@@ -23,23 +24,20 @@ function Room() {
   const fetch = useSelector((state) => state.authReducer.fetch);
   const chat = useSelector((state) => state.chatReducer.chats);
   const { chatSlug } = useParams();
-  console.log("yanal :", messages);
   const chatName = chat.filter((c) => +chatSlug === c.id);
-
   const dispatch = useDispatch();
-  //ToDo : waiting for laila
+
   useEffect(() => {
-    // dispatch(chatDetail(chatSlug))
     if (fetch && token) dispatch(chatDetail(chatSlug));
   }, []);
-  // console.log(chatSlug);
+
   if (!token) return <Redirect to="/" />;
 
   console.log("fetch :", chatName);
   return (
     <RoomMasterDiv>
       <RoomSecondDiv>
-        <h1>{chatName[0].name} </h1>
+        <RoomNameH>{chatName[0].name} </RoomNameH>
         <RoomImage src={chatName[0].image} />
         <BsTrash
           style={{

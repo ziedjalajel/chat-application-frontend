@@ -25,14 +25,12 @@ const MessageForm = ({ id }) => {
   };
 
   function handleOnEnter(event) {
-    // console.log(text);
     resetForm();
     dispatch(addMessage({ text }, id));
   }
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addMessage(message), id);
-    // console.log(message);
   };
   const handleAttachment = (event) => {
     dispatch(addMessage({ ...message, image: event.target.files[0] }, id));
