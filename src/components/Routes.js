@@ -8,6 +8,7 @@ import NewChatFullPage from "./FullPage/NewChatFullPage";
 import SettingsFullPage from "./FullPage/SettingsFullPage";
 import ChatList from "./ChatRoom/sideBarContact/ChatList";
 import ChatPrivate from "./ChatRoom/chats/ChatPrivate";
+import NewChatForm from "./ChatRoom/sideBarContact/NewChatForm";
 
 const Routes = () => {
   return (
@@ -29,6 +30,9 @@ const Routes = () => {
       </Route>
       <Route path="/chats">
         <ChatList />
+      </Route>
+      <Route path="/add-chat">
+        <NewChatForm />
       </Route>
       <Route exact path="/">
         <Home />
