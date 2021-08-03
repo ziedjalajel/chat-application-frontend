@@ -7,6 +7,7 @@ import FullPage from "./FullPage/FullPage";
 import NewChatFullPage from "./FullPage/NewChatFullPage";
 import SettingsFullPage from "./FullPage/SettingsFullPage";
 import ChatList from "./ChatRoom/sideBarContact/ChatList";
+import ChatPrivate from "./ChatRoom/chats/ChatPrivate";
 
 const Routes = () => {
   return (
