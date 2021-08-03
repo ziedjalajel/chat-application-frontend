@@ -1,10 +1,10 @@
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import { checkForToken } from "./actions/authActions";
+import { checkForToken, fetchUserProfile } from "./actions/authActions";
 import { fetchMessages } from "./actions/messageActions";
 import { fetchChats } from "./actions/chatActions";
-// import { fetchProfiles } from "./actions/profileAction";
 import rootReducer from "./reducer/rootReducer";
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer,
@@ -14,7 +14,7 @@ const store = createStore(
 
 store.dispatch(fetchMessages());
 store.dispatch(fetchChats());
-// store.dispatch(fetchProfiles());
+store.dispatch(fetchUserProfile());
 store.dispatch(checkForToken());
 
 export default store;

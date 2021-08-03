@@ -18,7 +18,6 @@ const ChatListComponent = () => {
         chat.users.length !== 2
     )
     .map((chat) => <ChatItem chat={chat} key={chat.id} />);
-  console.log("moe :", chats);
   return (
     <div>
       <SearchBar setQuery={setQuery} />

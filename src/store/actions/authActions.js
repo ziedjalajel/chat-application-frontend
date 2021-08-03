@@ -19,7 +19,6 @@ export const signIn = (userData, history) => {
   return async (dispatch) => {
     try {
       const res = await instance.post("/signin", userData);
-      // console.log("res", decode(res.data.token));
       dispatch(setUser(res.data.token));
       history.push("/chats");
     } catch (error) {
@@ -59,12 +58,42 @@ export const checkForToken = () => {
 export const fetchProfiles = (userId) => {
   return async (dispatch) => {
     try {
-      console.log("hello", userId);
       const res = await instance.get(`/userprofile/${userId}`);
-
       dispatch({
         type: actionTypes.FETCH_PROFILES,
         payload: res.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+export const fetchUserProfile = () => {
+  return async (dispatch) => {
+    try {
+      const res = await instance.get(`/users`);
+
+      dispatch({
+        type: actionTypes.FETCH_USER_PROFILE,
+        payload: res.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+export const addChatUser = (newChatUser, chatId) => {
+  return async (dispatch) => {
+    try {
+      newChatUser = [
+        {
+          userId: newChatUser.id[0],
+        },
+      ];
+      const res = await instance.post(`/chats/${chatId}/userchat`, newChatUser);
+      dispatch({
+        type: actionTypes.ADD_CHAT_USER,
+        payload: { newChatUser: res.data },
       });
     } catch (error) {
       console.log(error);

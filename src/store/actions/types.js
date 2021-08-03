@@ -16,3 +16,5 @@ export const UPDATE_PROFILE = "UPDATE_PROFILE";
 
 //user
 export const SET_USER = "SET_USER";
+export const FETCH_USER_PROFILE = "FETCH_USER_PROFILE";
+export const ADD_CHAT_USER = "ADD_CHAT_USER";

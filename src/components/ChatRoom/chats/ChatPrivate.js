@@ -17,12 +17,6 @@ const ChatPrivate = () => {
         chat.users.length === 2
     )
     .map((chat) => <ChatItem chat={chat} key={chat.id} />);
-  console.log("moe :", chats);
-  return (
-    <div>
-      {/* <SearchBar setQuery={setQuery} /> */}
-      {chatPrivateList}
-    </div>
-  );
+  return <div>{chatPrivateList}</div>;
 };
 export default ChatPrivate;

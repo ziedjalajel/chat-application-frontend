@@ -27,7 +27,13 @@ const reducer = (state = initialState, action) => {
 
         loading: false,
       };
+    case actionTypes.FETCH_USER_PROFILE:
+      return {
+        ...state,
+        user: action.payload,
 
+        loading: false,
+      };
     default:
       return state;
   }
