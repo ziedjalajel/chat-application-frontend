@@ -5,23 +5,24 @@ import {
   DetailMesaageMasterDiv,
   MessageImage,
   ImageDisNone,
-  ChatItemH2,
-  ChatItemH6,
+  MessageBoxP2,
 } from "../../../styles";
 
 const MessageDetails = ({ message, user }) => {
-  // const month = message.updatedAt.substring(10, -1);
-  // const hourly = message.updatedAt.substring(11, 16);
-  // const time = `${month}-${hourly}`;
+  const profileId = useSelector((state) => state.authReducer.user);
+
   return (
     <DetailMesaageMasterDiv>
-      {/* <ChatItemH6>{time}</ChatItemH6> */}
-      {message.text && (
+      {message.text && message.userId === profileId.id ? (
         <MessageBoxP>
-          {" "}
           {user.username}:{message.text}
         </MessageBoxP>
+      ) : (
+        <MessageBoxP2>
+          {user.username}:{message.text}
+        </MessageBoxP2>
       )}
+
       {message.image ? <MessageImage src={message.image} /> : <ImageDisNone />}
     </DetailMesaageMasterDiv>
   );

@@ -62,7 +62,7 @@ function Room() {
         />
       </RoomSecondDiv>
       <RoomScroll>
-        <RoomScrollFScroll>
+        <RoomScrollFScroll className="scroll">
           <MessageList
             users={chatName.users}
             messages={messages.filter(
