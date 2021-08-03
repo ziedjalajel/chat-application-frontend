@@ -34,20 +34,22 @@ const CreateNewChat = () => {
           />
           <PStyle>Create Group</PStyle>
         </GroupIconDiv>
-        <PlusIconDiv type="button">
-          <MdAddCircleOutline
-            style={{
-              position: "absolute",
-              width: "50px",
-              height: "50px",
-              top: " 13%",
-              color: "black",
-              bottom: " 86%",
-              marginBottom: "15px",
-            }}
-          />
-          <P2Style>Add Chat</P2Style>
-        </PlusIconDiv>
+        <Link to="/add-chat">
+          <PlusIconDiv type="button">
+            <MdAddCircleOutline
+              style={{
+                position: "absolute",
+                width: "50px",
+                height: "50px",
+                top: " 13%",
+                color: "black",
+                bottom: " 86%",
+                marginBottom: "15px",
+              }}
+            />
+            <P2Style>Add Chat</P2Style>
+          </PlusIconDiv>
+        </Link>
         <NewChattInp />
       </SideBMasterDiv>
     </BGDiv>

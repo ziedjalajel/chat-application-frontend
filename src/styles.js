@@ -550,3 +550,33 @@ export const ChatItemH6 = styled.h6`
   margin-left: 66%;
   margin-top: 6.8%;
 `;
+//addchatform
+export const AddChatLabel = styled.label`
+  position: absolute;
+  color: red;
+  font-size: xx-large;
+  margin-top: 10%;
+  left: 44%;
+  font-weight: bold;
+`;
+export const AddChatInp = styled.input`
+  position: absolute;
+  color: white;
+  background-color: red;
+  margin-top: 18%;
+  left: 35%;
+  font-weight: bold;
+  width: 450px;
+`;
+export const AddChatBtn = styled.button`
+  position: absolute;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 0, 0, 0.42) 32.38%,
+    rgba(249, 0, 0, 0) 100%
+  );
+  border: none;
+  margin-top: 30%;
+  left: 46%;
+`;
