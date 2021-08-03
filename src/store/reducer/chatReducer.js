@@ -8,6 +8,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_CHATS:
+      console.log(action.payload);
       return {
         ...state,
         chats: action.payload,

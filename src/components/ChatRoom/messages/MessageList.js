@@ -12,6 +12,7 @@ const MessageList = ({ messages }) => {
   const messageList = messages.map((message) => (
     <MessageDetails message={message} key={message.id} />
   ));
+
   return (
     <div id={"el"} ref={el}>
       {messageList}

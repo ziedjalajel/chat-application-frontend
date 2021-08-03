@@ -27,7 +27,12 @@ const ChatList = ({ chat }) => {
 
   return (
     <ChatListMasterDiv>
-      <ChatListImage src={users.image} alt={users.username} />
+      {!users.image ? (
+        <ChatListImage src={Profile} />
+      ) : (
+        <ChatListImage src={users.image} alt={users.username} />
+      )}
+
       <ChatListIconDiv type="button">
         {users && (
           <>

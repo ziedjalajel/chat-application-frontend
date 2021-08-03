@@ -58,10 +58,13 @@ const Settings = () => {
     resetFormImage();
     dispatch(updateProfile(image, users.id));
   };
-  console.log(users.image);
   return (
     <SettingsMasterDiv className="container">
-      <SettingsImage src={users.image} alt={users.username} />
+      {!users.image ? (
+        <SettingsImage src={Profile} />
+      ) : (
+        <SettingsImage src={users.image} alt={users.username} />
+      )}
 
       <SettingsUserDiv className="container">
         {users && <SettingsUserH>{users.username}</SettingsUserH>}
@@ -100,12 +103,12 @@ const Settings = () => {
             name="bio"
           />
 
-          <SettingsPassH1>Old Password</SettingsPassH1>
+          {/* <SettingsPassH1>Old Password</SettingsPassH1>
           <SettingsPass1Inp type="password" />
           <SettingsPassH2>New Password</SettingsPassH2>
           <SettingsPass2Inp />
           <SettingsPass3H>Confirm Password</SettingsPass3H>
-          <SettingsPass3Inp />
+          <SettingsPass3Inp /> */}
           <SettingsPass2Btn
             type="submit"
             // onClick={refreshPage}

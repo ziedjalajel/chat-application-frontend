@@ -35,12 +35,18 @@ export const RoomSecondDiv = styled.div`
     rgba(234, 218, 66, 0) 100%
   );
 `;
+export const RoomNameH = styled.h1`
+  position: absolute;
+  color: red;
+  left: 40%;
+`;
 export const RoomImage = styled.img`
   position: absolute;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   left: 84%;
-  top: 1px;
+  top: 5px;
+  border-radius: 50%;
 `;
 export const RoomScroll = styled.div`
   width: 100%;
@@ -277,10 +283,10 @@ export const ChatListIconDiv = styled.div`
 `;
 export const ChatListImage = styled.img`
   position: absolute;
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  padding: 5px;
+  padding: 2%;
 `;
 export const ChatListH = styled.h4`
   color: red;
@@ -325,7 +331,7 @@ export const ProfilePicImg = styled.img`
   position: absolute;
   height: 170px;
   width: 170px;
-  right: 38%;
+  right: 35%;
   top: 5%;
   border-radius: 50%;
 `;
@@ -338,6 +344,8 @@ export const ProfileUserH = styled.h2`
   font-weight: bold;
   font-style: italic;
   color: red;
+  margin-left: 10%;
+  margin-top: 2%;
 `;
 export const ProfileBioH = styled.h4`
   font-weight: bold;
@@ -345,13 +353,13 @@ export const ProfileBioH = styled.h4`
   color: red;
   position: absolute;
   top: 37%;
-  left: 14%;
-  /* width: 40%; */
+  left: 7%;
+  padding: 10%;
 `;
 export const SignOutBtn = styled.button`
   position: fixed;
   top: 65%;
-  left: 9%;
+  left: 11%;
   font-size: xx-large;
   width: 200px;
   height: 90px;
@@ -412,12 +420,12 @@ export const SettingsImgInp = styled.input`
 `;
 export const SettingsBioH = styled.h2`
   position: absolute;
-  top: 32%;
+  top: 45%;
   left: 5%;
   color: red;
 `;
-export const SettingsBioInp = styled.input`
-  margin-top: 24.6%;
+export const SettingsBioInp = styled.textarea`
+  margin-top: 34.6%;
   margin-left: 12%;
   border: none;
   height: 90px;
@@ -488,7 +496,7 @@ export const ChangeImageBtn = styled.button`
     rgba(249, 0, 0, 0) 100%
   );
 `;
-//CHatItem
+//ChatItem
 export const ChatItemImage = styled.img`
   height: 70px;
   width: 70px;
@@ -500,4 +508,16 @@ export const ChatItemDiv = styled.div`
   display: flex;
   margin-bottom: 10px;
   margin-top: 10px;
+`;
+export const ChatItemH2 = styled.h2`
+  color: red;
+  margin-left: 4%;
+  margin-top: 4%;
+  text-decoration: none;
+`;
+export const ChatItemH6 = styled.h6`
+  position: absolute;
+  color: red;
+  margin-left: 66%;
+  margin-top: 6.8%;
 `;

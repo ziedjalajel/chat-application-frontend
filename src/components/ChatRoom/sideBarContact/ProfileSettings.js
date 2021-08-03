@@ -27,7 +27,7 @@ const ProfileSettings = () => {
 
   return (
     <ProfileBGDiv>
-      <Link to="room">
+      <Link to="/chats">
         <BiArrowBack
           style={{
             color: "red",
@@ -36,8 +36,11 @@ const ProfileSettings = () => {
           }}
         />
       </Link>
-
-      <ProfilePicImg src={users.image} alt={users.name} />
+      {!users.image ? (
+        <ProfilePicImg src={Profilepic} />
+      ) : (
+        <ProfilePicImg src={users.image} alt={users.name} />
+      )}
 
       <ProfileUserDiv className="container">
         {users && (
