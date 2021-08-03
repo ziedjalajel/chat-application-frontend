@@ -4,7 +4,6 @@ import { useHistory, Link } from "react-router-dom";
 
 //store
 import { signUp } from "../../store/actions/authActions";
-import { addProfile } from "../../store/actions/profileAction";
 //styles
 import {
   Center,
@@ -24,7 +23,6 @@ const SignUpForm = () => {
     password: "",
     email: "",
   });
-  const [profile] = useState("");
 
   const handleChange = (event) =>
     setUser({ ...user, [event.target.name]: event.target.value });

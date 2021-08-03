@@ -21,7 +21,6 @@ const ChatList = ({ chat }) => {
   const users = useSelector((state) => state.authReducer.user);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log("user id :", users.id);
     dispatch(fetchProfiles(users.id));
   }, []);
 

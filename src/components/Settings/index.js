@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, Link } from "react-router-dom";
 //styles
 import Profile from "../../Picture1.png";
 import { GrCheckboxSelected } from "react-icons/gr";
@@ -12,20 +11,12 @@ import {
   SettingsImgInp,
   SettingsBioH,
   SettingsBioInp,
-  SettingsPass1Inp,
-  SettingsPassH1,
-  SettingsPass2Inp,
-  SettingsPassH2,
-  SettingsPass3Inp,
-  SettingsPass3H,
   SettingsPass2Btn,
-  ChangeImageBtn,
 } from "../../styles";
 //action
 import { updateProfile } from "../../store/actions/authActions";
 
 const Settings = () => {
-  const { userId } = useParams();
   const dispatch = useDispatch();
   const users = useSelector((state) => state.authReducer.user);
   const [profile, setProfile] = useState({

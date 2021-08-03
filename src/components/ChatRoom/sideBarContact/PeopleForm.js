@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 // actions
 import { addChat, fetchChats } from "../../../store/actions/chatActions";
-import { fetchUserProfile } from "../../../store/actions/authActions";
+import {
+  addChatUser,
+  fetchUserProfile,
+} from "../../../store/actions/authActions";
 //styles
 import {
   CreateGroupLabel,
@@ -12,48 +15,41 @@ import {
   CreateGroupBtn,
 } from "../../../styles";
 
-const NewGroupForm = () => {
+const PeopleForm = () => {
+  const { chatSlug } = useParams();
   const dispatch = useDispatch();
   const history = useHistory();
   const [chat, setChat] = useState({
-    name: "",
-    image: "",
+    id: "",
   });
   const handleChange = (event) =>
     setChat({
       ...chat,
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value.split(",").map((c) => +c),
     });
-
-  const handleImage = (event) =>
-    setChat({ ...chat, image: event.target.files[0] });
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addChat(chat));
-    dispatch(fetchChats());
-    history.push("/chats");
+    dispatch(addChatUser(chat, +chatSlug));
+    history.push(`/chats/${chatSlug}`);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <CreateGroupLabel>Create a Group</CreateGroupLabel>
-        <CreateGroupInpImg
-          type="file"
-          placeholder="choose image"
-          onChange={handleImage}
-        />
+        <CreateGroupLabel>Add People</CreateGroupLabel>
+
         <CreateGroupInp
           type="text"
-          placeholder="Enter Group Name"
+          name="id"
+          value={chat.id}
+          placeholder="Enter ids"
           onChange={handleChange}
         />
       </div>
       <CreateGroupBtn type="submit" className="btn btn-danger">
-        Create Group
+        Add People
       </CreateGroupBtn>
     </form>
   );
 };
-export default NewGroupForm;
+export default PeopleForm;

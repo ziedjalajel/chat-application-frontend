@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect, useParams } from "react-router-dom";
+import { Redirect, useParams, Link } from "react-router-dom";
 // styling
 import "./Room.css";
 import Profile from "../../Picture1.png";
 import { BsTrash, BsHeart } from "react-icons/bs";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import {
   RoomMasterDiv,
   RoomSecondDiv,
@@ -25,41 +26,34 @@ function Room() {
   const chat = useSelector((state) => state.chatReducer.chats);
   const { chatSlug } = useParams();
   const chatName = chat.find((c) => +chatSlug === c.id);
+  const chatId = chatName.id;
+
   const dispatch = useDispatch();
-  console.log("here :", chatName);
   useEffect(() => {
     if (fetch && token) dispatch(chatDetail(chatSlug));
   }, []);
 
   if (!token) return <Redirect to="/" />;
 
-  console.log("fetch :", chatName);
   return (
     <RoomMasterDiv>
       <RoomSecondDiv>
         <RoomNameH>{chatName.name} </RoomNameH>
         <RoomImage src={chatName.image} />
-        <BsTrash
-          style={{
-            position: "absolute",
-            width: "30px",
-            height: "30px",
-            left: "93%",
-            right: "0.9%",
-            top: " 10px",
-            bottom: " 90.23%",
-          }}
-        />
-        <BsHeart
-          style={{
-            position: "absolute",
-            width: "30px",
-            height: "30px",
-            left: "93%",
-            right: "0.9%",
-            top: " 50px",
-          }}
-        />
+        <Link to={`/chats/${chatId}/add-members`}>
+          <AiOutlineUsergroupAdd
+            style={{
+              position: "absolute",
+              width: "40px",
+              height: "40px",
+              left: "93%",
+              right: "0.9%",
+              top: " 18px",
+              bottom: " 90.23%",
+              color: "red",
+            }}
+          />
+        </Link>
       </RoomSecondDiv>
       <RoomScroll>
         <RoomScrollFScroll className="scroll">

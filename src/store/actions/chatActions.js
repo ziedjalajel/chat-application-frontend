@@ -6,7 +6,7 @@ export const fetchChats = () => {
   return async (dispatch) => {
     try {
       const res = await instance.get(`/chats/`);
-      // console.log(res.data);
+
       dispatch({
         type: actionTypes.FETCH_CHATS,
         payload: res.data,
@@ -50,7 +50,6 @@ export const chatDetail = (chatId) => {
   return async (dispatch) => {
     try {
       const res = await instance.get(`/chats/${chatId}`);
-      // console.log(res.data);
       dispatch({
         type: actionTypes.DETAIL_CHAT,
         payload: res.data,

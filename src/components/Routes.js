@@ -7,13 +7,16 @@ import FullPage from "./FullPage/FullPage";
 import NewChatFullPage from "./FullPage/NewChatFullPage";
 import SettingsFullPage from "./FullPage/SettingsFullPage";
 import ChatList from "./ChatRoom/sideBarContact/ChatList";
-import ChatPrivate from "./ChatRoom/chats/ChatPrivate";
 import NewChatForm from "./ChatRoom/sideBarContact/NewChatForm";
 import NewGroupForm from "./ChatRoom/sideBarContact/NewGroupForm";
+import PeopleForm from "./ChatRoom/sideBarContact/PeopleForm";
 
 const Routes = () => {
   return (
     <Switch>
+      <Route path={`/chats/:chatSlug/add-members`}>
+        <PeopleForm />
+      </Route>
       <Route path={`/chats/:chatSlug`}>
         <FullPage />
       </Route>
@@ -38,6 +41,7 @@ const Routes = () => {
       <Route path="/create-group">
         <NewGroupForm />
       </Route>
+
       <Route exact path="/">
         <Home />
       </Route>
