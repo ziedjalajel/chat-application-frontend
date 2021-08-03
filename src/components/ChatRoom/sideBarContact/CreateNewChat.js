@@ -20,20 +20,25 @@ const CreateNewChat = () => {
         <BiArrowBack style={{ height: "40px", width: "40px", color: "red" }} />
       </Link>
       <SideBMasterDiv className="container">
-        <GroupIconDiv type="button">
-          <GrGroup
-            style={{
-              position: "absolute",
-              width: "25px",
-              height: "25px",
-              left: "34%",
-              right: "60%",
-              top: " 13%",
-              bottom: " 86%",
-            }}
-          />
-          <PStyle>Create Group</PStyle>
-        </GroupIconDiv>
+        <Link
+          to="/create-group"
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          <GroupIconDiv type="button">
+            <GrGroup
+              style={{
+                position: "absolute",
+                width: "25px",
+                height: "25px",
+                left: "34%",
+                right: "60%",
+                top: " 13%",
+                bottom: " 86%",
+              }}
+            />
+            <PStyle>Create Group</PStyle>
+          </GroupIconDiv>
+        </Link>
         <Link to="/add-chat">
           <PlusIconDiv type="button">
             <MdAddCircleOutline

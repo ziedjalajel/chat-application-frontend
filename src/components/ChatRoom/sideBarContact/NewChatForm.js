@@ -18,14 +18,12 @@ const NewChatForm = () => {
     history.push("/chats");
   };
   return (
-    <form>
-      <div className="form-group" onSubmit={handleSubmit}>
-        <AddChatLabel for="exampleInputEmail1">Add Contact</AddChatLabel>
+    <form onSubmit={handleSubmit}>
+      <div className="form-group">
+        <AddChatLabel>Add Contact</AddChatLabel>
         <AddChatInp
           type="text"
           className="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
           placeholder="Enter id"
           onChange={handleChange}
         />
