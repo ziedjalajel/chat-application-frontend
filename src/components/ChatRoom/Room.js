@@ -24,9 +24,9 @@ function Room() {
   const fetch = useSelector((state) => state.authReducer.fetch);
   const chat = useSelector((state) => state.chatReducer.chats);
   const { chatSlug } = useParams();
-  const chatName = chat.filter((c) => +chatSlug === c.id);
+  const chatName = chat.find((c) => +chatSlug === c.id);
   const dispatch = useDispatch();
-
+  console.log("here :", chatName);
   useEffect(() => {
     if (fetch && token) dispatch(chatDetail(chatSlug));
   }, []);
@@ -37,8 +37,8 @@ function Room() {
   return (
     <RoomMasterDiv>
       <RoomSecondDiv>
-        <RoomNameH>{chatName[0].name} </RoomNameH>
-        <RoomImage src={chatName[0].image} />
+        <RoomNameH>{chatName.name} </RoomNameH>
+        <RoomImage src={chatName.image} />
         <BsTrash
           style={{
             position: "absolute",
@@ -64,6 +64,7 @@ function Room() {
       <RoomScroll>
         <RoomScrollFScroll>
           <MessageList
+            users={chatName.users}
             messages={messages.filter(
               (message) => message.chatId === +chatSlug
             )}
