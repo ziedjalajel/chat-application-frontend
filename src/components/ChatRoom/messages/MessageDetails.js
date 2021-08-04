@@ -14,9 +14,9 @@ const MessageDetails = ({ message, user }) => {
   return (
     <>
       <DetailMesaageMasterDiv>
-        {message.text || (message.image && message.userId === profileId.id) ? (
+        {(message.text || message.image) && message.userId === profileId.id ? (
           <MessageBoxP>
-            {user.username}:{message.text}
+            {user.username}: {message.text}
             {message.image ? (
               <MessageImage src={message.image} />
             ) : (
@@ -25,7 +25,7 @@ const MessageDetails = ({ message, user }) => {
           </MessageBoxP>
         ) : (
           <MessageBoxP2>
-            {user.username}:{message.text}
+            {user.username}: {message.text}
             {message.image ? (
               <MessageImage src={message.image} />
             ) : (

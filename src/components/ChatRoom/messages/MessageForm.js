@@ -75,7 +75,6 @@ const MessageForm = ({ id }) => {
               />
             </AttachIconDiv>
           </label>
-          {/* <ButtonAtt type="submit " onSubmit={handleSubmit}></ButtonAtt> */}
         </form>
       </div>
     </div>

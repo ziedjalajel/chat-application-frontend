@@ -21,7 +21,7 @@ const NewChatForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <AddChatLabel>Add Contact</AddChatLabel>
+        <AddChatLabel>New Message</AddChatLabel>
         <AddChatInp
           type="text"
           className="form-control"

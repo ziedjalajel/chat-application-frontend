@@ -94,17 +94,7 @@ const Settings = () => {
             name="bio"
           />
 
-          {/* <SettingsPassH1>Old Password</SettingsPassH1>
-          <SettingsPass1Inp type="password" />
-          <SettingsPassH2>New Password</SettingsPassH2>
-          <SettingsPass2Inp />
-          <SettingsPass3H>Confirm Password</SettingsPass3H>
-          <SettingsPass3Inp /> */}
-          <SettingsPass2Btn
-            type="submit"
-            // onClick={refreshPage}
-            className="btn btn-danger"
-          >
+          <SettingsPass2Btn type="submit" className="btn btn-danger">
             Save Changes
           </SettingsPass2Btn>
         </div>
