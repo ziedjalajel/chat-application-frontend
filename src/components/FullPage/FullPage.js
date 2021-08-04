@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 
 const FullPage = () => {
   const dispatch = useDispatch();
-  // const [refresh, setRefresh] = useState();
+  const [refresh, setRefresh] = useState();
   const user = useSelector((state) => state.authReducer.user);
   const chat = useSelector((state) => state.chatReducer.chats);
   //Very Important
@@ -20,7 +20,7 @@ const FullPage = () => {
   //   const intervalID = setInterval(() => {
   //     console.log("here");
   //     dispatch(fetchMessages());
-  //   }, 3000);
+  //   }, 5000);
   //   return () => clearInterval(intervalID);
   // }, []);
   return (

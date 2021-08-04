@@ -13,8 +13,9 @@ const NewChatForm = () => {
     setChat({ ...chat, [event.target.name]: event.target.value });
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addChat(chat)).then((c) => dispatch(fetchChats()));
     dispatch(fetchChats());
+    dispatch(addChat(chat)).then((c) => dispatch(fetchChats()));
+
     history.push("/chats");
   };
   return (

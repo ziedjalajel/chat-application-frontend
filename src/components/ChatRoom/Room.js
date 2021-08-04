@@ -39,7 +39,12 @@ function Room() {
     <RoomMasterDiv>
       <RoomSecondDiv>
         <RoomNameH>{chatName.name} </RoomNameH>
-        <RoomImage src={chatName.image} />
+        {!chatName.image ? (
+          <RoomImage src={Profile} />
+        ) : (
+          <RoomImage src={chatName.image} />
+        )}
+
         <Link to={`/chats/${chatId}/add-members`}>
           <AiOutlineUsergroupAdd
             style={{

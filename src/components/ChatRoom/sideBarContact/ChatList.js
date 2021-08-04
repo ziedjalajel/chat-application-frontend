@@ -39,14 +39,14 @@ const ChatList = ({ chat }) => {
           </>
         )}
 
-        <FaRegCircle
+        {/* <FaRegCircle
           style={{
             color: "red",
             height: "20px",
             width: "20px",
             marginLeft: "19%",
           }}
-        />
+        /> */}
         <Link to="/newchat">
           <SiGooglemessages
             style={{

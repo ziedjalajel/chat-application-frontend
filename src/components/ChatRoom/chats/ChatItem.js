@@ -7,6 +7,7 @@ import {
   ChatItemH2,
   ChatItemH6,
 } from "../../../styles";
+import ProfilePic from "../../../Picture1.png";
 //components
 import FullPage from "../../FullPage/FullPage";
 
@@ -25,9 +26,14 @@ const ChatItem = ({ chat }) => {
     <>
       <Link to={`/chats/${chat.id}`} style={{ textDecoration: "none" }}>
         <ChatItemDiv className="container">
-          <ChatItemImage src={chat.image} alt={chat.name} />
+          {!chat.image ? (
+            <ChatItemImage src={ProfilePic} alt={chat.name} />
+          ) : (
+            <ChatItemImage src={chat.image} alt={chat.name} />
+          )}
+
           <ChatItemH2>{chat.name}</ChatItemH2>
-          <ChatItemH6>{time}</ChatItemH6>
+          {/* <ChatItemH6>{time}</ChatItemH6> */}
         </ChatItemDiv>
       </Link>
     </>
