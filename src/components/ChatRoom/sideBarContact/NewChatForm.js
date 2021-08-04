@@ -9,8 +9,8 @@ const NewChatForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const [chat, setChat] = useState("");
-  const handleChange = (event) =>
-    setChat({ ...chat, [event.target.name]: event.target.value });
+  const handleChange = (event) => setChat(event.target.value);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(fetchChats());

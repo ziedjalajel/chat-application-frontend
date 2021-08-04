@@ -23,7 +23,7 @@ const ChatListComponent = () => {
     <div>
       <SearchBar setQuery={setQuery} />
       {chatList}
-      <ChatPrivate setQuery={setQuery} />
+      <ChatPrivate query={query} />
     </div>
   );
 };
