@@ -179,11 +179,9 @@ export const ButtonAtt = styled.button`
 `;
 export const MessageBoxP = styled.div`
   background: linear-gradient(
-    180deg,
-    rgba(222, 148, 3, 0.52) 0%,
-    rgba(222, 148, 3, 0.2275) 54.17%,
-    rgba(222, 148, 3, 0.0896212) 99.99%,
-    rgba(222, 148, 3, 0) 100%
+    270deg,
+    rgba(221, 2, 2, 0.6) 3.44%,
+    rgba(83, 46, 46, 0.6) 100%
   );
   width: auto;
   height: auto;
@@ -200,9 +198,9 @@ export const MessageBoxP = styled.div`
 `;
 export const MessageBoxP2 = styled.div`
   background: linear-gradient(
-    180deg,
-    rgba(210, 100, 38, 0.6) 48.44%,
-    rgba(255, 92, 0, 0) 100%
+    270deg,
+    rgba(187, 102, 102, 0.89) 0%,
+    rgba(173, 17, 17, 0.61) 100%
   );
   width: auto;
   height: auto;
@@ -321,9 +319,10 @@ export const ChatListH = styled.h4`
   margin-top: 0%;
 `;
 export const ChatListInp = styled.input`
-  background-color: red;
+  background: linear-gradient(270deg, #e35959 0%, rgba(235, 20, 20, 0.32) 100%);
+  border-radius: 30px;
   width: 78%;
-  color: white;
+  font-weight: bold;
   font-size: large;
   margin-top: 9.5%;
   margin-left: 14%;
@@ -447,61 +446,23 @@ export const SettingsImgInp = styled.input`
 `;
 export const SettingsBioH = styled.h2`
   position: absolute;
-  top: 45%;
+  top: 51%;
   left: 5%;
   color: red;
 `;
 export const SettingsBioInp = styled.textarea`
-  margin-top: 34.6%;
+  margin-top: 40%;
   margin-left: 12%;
   border: none;
   height: 90px;
   width: 450px;
 `;
-export const SettingsPass1Inp = styled.input`
-  position: absolute;
-  left: 28.5%;
-  top: 54.5%;
-  width: 294px;
-  border: none;
-`;
-export const SettingsPassH1 = styled.h2`
-  position: absolute;
-  top: 53.5%;
-  left: 5%;
-  color: red;
-`;
-export const SettingsPass2Inp = styled.input`
-  position: absolute;
-  left: 28.5%;
-  top: 63%;
-  width: 294px;
-  border: none;
-`;
-export const SettingsPassH2 = styled.h2`
-  position: absolute;
-  top: 62%;
-  left: 5%;
-  color: red;
-`;
-export const SettingsPass3Inp = styled.input`
-  position: absolute;
-  left: 33%;
-  top: 71.5%;
-  width: 250px;
-  border: none;
-`;
-export const SettingsPass3H = styled.h2`
-  position: absolute;
-  top: 70.8%;
-  left: 5%;
-  color: red;
-`;
+
 export const SettingsPass2Btn = styled.button`
   color: white;
   position: absolute;
   left: 60%;
-  top: 85%;
+  top: 53.5%;
   height: 60px;
   width: 160;
   border-radius: 5%;
@@ -560,7 +521,7 @@ export const AddChatLabel = styled.label`
 export const AddChatInp = styled.input`
   position: absolute;
   color: white;
-  background-color: red;
+  background: linear-gradient(270deg, #e35959 0%, rgba(235, 20, 20, 0.32) 100%);
   margin-top: 18%;
   left: 35%;
   font-weight: bold;
@@ -600,7 +561,7 @@ export const CreateGroupInpImg = styled.input`
 export const CreateGroupInp = styled.input`
   position: absolute;
   color: white;
-  background-color: red;
+  background: linear-gradient(270deg, #e35959 0%, rgba(235, 20, 20, 0.32) 100%);
   margin-top: 26%;
   left: 35%;
   font-weight: bold;

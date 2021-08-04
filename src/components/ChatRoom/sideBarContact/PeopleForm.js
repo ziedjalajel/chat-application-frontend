@@ -36,7 +36,7 @@ const PeopleForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <CreateGroupLabel>Add People</CreateGroupLabel>
+        <CreateGroupLabel>Add Member</CreateGroupLabel>
 
         <CreateGroupInp
           type="text"
@@ -47,7 +47,7 @@ const PeopleForm = () => {
         />
       </div>
       <CreateGroupBtn type="submit" className="btn btn-danger">
-        Add People
+        Add To Group
       </CreateGroupBtn>
     </form>
   );
