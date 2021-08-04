@@ -47,7 +47,7 @@ const ChatList = ({ chat }) => {
             marginLeft: "19%",
           }}
         /> */}
-        <Link to="/newchat">
+        <Link to="/add-chat">
           <SiGooglemessages
             style={{
               position: "absolute",

@@ -201,10 +201,8 @@ export const MessageBoxP = styled.div`
 export const MessageBoxP2 = styled.div`
   background: linear-gradient(
     180deg,
-    rgba(222, 148, 3, 0.52) 0%,
-    rgba(222, 148, 3, 0.2275) 54.17%,
-    rgba(222, 148, 3, 0.0896212) 99.99%,
-    rgba(222, 148, 3, 0) 100%
+    rgba(210, 100, 38, 0.6) 48.44%,
+    rgba(255, 92, 0, 0) 100%
   );
   width: auto;
   height: auto;
@@ -226,7 +224,7 @@ export const MessageImage = styled.img`
   width: 300px;
   height: 300px;
   border-radius: 10%;
-  margin-left: 59%;
+  margin-left: 5%;
   padding: 1%;
 `;
 // export const MessageImage = styled.img`
