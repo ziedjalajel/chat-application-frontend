@@ -18,11 +18,12 @@ const ChatListComponent = () => {
         chat.users.length !== 2
     )
     .map((chat) => <ChatItem chat={chat} key={chat.id} />);
+  console.log("here", chats);
   return (
     <div>
       <SearchBar setQuery={setQuery} />
       {chatList}
-      <ChatPrivate />
+      <ChatPrivate setQuery={setQuery} />
     </div>
   );
 };

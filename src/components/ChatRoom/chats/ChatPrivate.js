@@ -9,6 +9,7 @@ const ChatPrivate = () => {
   const [query, setQuery] = useState("");
   const chats = useSelector((state) => state.chatReducer.chats);
   const _user = useSelector((state) => state.authReducer.user);
+  // <SearchBar setQuery={setQuery} />;
   const chatPrivateList = chats
     .filter(
       (chat) =>
