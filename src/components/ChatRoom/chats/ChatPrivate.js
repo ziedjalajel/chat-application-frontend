@@ -5,8 +5,7 @@ import { useSelector } from "react-redux";
 import ChatItem from "./ChatItem";
 import SearchBar from "../SearchBar";
 
-const ChatPrivate = () => {
-  const [query, setQuery] = useState("");
+const ChatPrivate = ({ query }) => {
   const chats = useSelector((state) => state.chatReducer.chats);
   const _user = useSelector((state) => state.authReducer.user);
   // <SearchBar setQuery={setQuery} />;

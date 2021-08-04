@@ -20,9 +20,7 @@ export const fetchChats = () => {
 export const addChat = (newChat) => {
   return async (dispatch) => {
     try {
-      const formData = new FormData();
-      for (const key in newChat) formData.append(key, newChat[key]);
-      const res = await instance.post("/chats", formData);
+      const res = await instance.post("/chats", { newChat, name: "" });
       dispatch({
         type: actionTypes.ADD_CHAT,
         payload: { newChat: res.data },
