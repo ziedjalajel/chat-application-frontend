@@ -20,7 +20,7 @@ const FullPage = () => {
   //   const intervalID = setInterval(() => {
   //     console.log("here");
   //     dispatch(fetchMessages());
-  //   }, 5000);
+  //   }, 3000);
   //   return () => clearInterval(intervalID);
   // }, []);
   return (
